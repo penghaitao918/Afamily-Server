@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="MySQL - wind@localhost" uuid="de88bfcb-d6b8-4d24-bc68-6a92117fbf96">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>wind.*</schema-pattern>
+      <default-schemas>wind.*</default-schemas>
+    </data-source>
+  </component>
+</project>
