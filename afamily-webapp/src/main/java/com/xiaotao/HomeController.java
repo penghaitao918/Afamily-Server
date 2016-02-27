@@ -28,15 +28,15 @@ import javax.servlet.http.HttpServletRequest;
 @Controller
 /*@RequestMapping()*/
 public class HomeController {
-    @RequestMapping(value = "/",method = RequestMethod.GET)
+/*    @RequestMapping(value = "/",method = RequestMethod.GET)
     public String getIndex(Model model){
 
         return "index";
-    }
-    @RequestMapping(value = "/login",method = RequestMethod.POST)
+    }*/
+/*    @RequestMapping(value = "/login",method = RequestMethod.POST)
     @ResponseBody
     public String login(HttpServletRequest request){
         System.out.println(request.getParameterMap());
         return "{a:1,b:c}";
-    }
+    }*/
 }
