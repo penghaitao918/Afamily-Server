@@ -36,7 +36,7 @@ public class LoginController {
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
     public String login(HttpServletRequest request, HttpSession session) {
         if (!(Boolean)session.getAttribute("FLAG")){
-            return "index";
+    //        return "index";
         }
         return "login";
     }

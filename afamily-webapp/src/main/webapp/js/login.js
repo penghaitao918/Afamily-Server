@@ -44,6 +44,7 @@ function validate () {
 }
 
 function submit(){
+    alert("Success");
     var loginId = $("#accountInput").val();
     var password = $("#passwordInput").val();
     $.ajax({
@@ -69,8 +70,4 @@ function submit(){
             alert("账号错误")
         }
     });
-}
-
-function login(){
-
 }

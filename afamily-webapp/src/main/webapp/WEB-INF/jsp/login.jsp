@@ -6,12 +6,10 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html>
 <head>
     <title>后台登录</title>
-    <meta name="author" content="XiaoTao" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <style>
         body{height:100%;background:#16a085;overflow:hidden;}
@@ -43,14 +41,11 @@
         <p>Copyright © xiaotao 版权所有</p>
     </dd>
 </dl>
-
 <script src="js/plugins/jquery.js"></script>
-<script src="js/common.js"></script>
 <script src="js/login.js"></script>
 <script src="js/plugins/Particleground.js"></script>
-<script src="js/login.js"></script>
 <script>
-    $(document).ready(function() {images
+    $(document).ready(function() {
         //粒子背景特效
         $('body').particleground({
             dotColor: '#5cbdaa',
@@ -60,11 +55,9 @@
         createCode();
         //测试提交，对接程序删除即可
         $(".submit_btn").click(function(){
-        //    location.href="index.html";
             validate();
         });
     });
 </script>
 </body>
 </html>
-
