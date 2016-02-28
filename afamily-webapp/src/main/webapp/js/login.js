@@ -37,10 +37,27 @@ function validate () {
       return false;
     }
     else {
-      window.open(document.getElementById("J_down").getAttribute("data-link"));
-      document.getElementById("J_codetext").value="";
-      createCode();
-      return true;
-    }
+        submit();
+        return true;
 
+    }
+}
+
+function submit(){
+    alert($("#accountInput").val() + " # " + $("#passwordInput").val());
+    $.ajax({
+        url: basePath + "admin/user/addScore",
+        data: {
+            account: $("#accountInput").val(),
+            password: $("#passwordInput").val()
+        },
+        dataType: "json",
+        type: "POST",
+        async:false,
+        success: function () {
+            alert("登录成功" + score);
+    //        window.location.href = basePath +"logout"
+        },
+        error: doError
+    })
 }

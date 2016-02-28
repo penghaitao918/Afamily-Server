@@ -36,7 +36,6 @@
 
     <!-- 定义无需Controller的url<->view直接映射 -->
     <mvc:view-controller path="/" view-name="index"/>
-    <mvc:view-controller path="/login" view-name="login"/>
 
     <context:property-placeholder ignore-resource-not-found="true" location="classpath*:/applicationProperties.properties"/>
 </beans>

@@ -25,10 +25,10 @@
         <em>Management System</em>
     </dt>
     <dd class="user_icon">
-        <input type="text" placeholder="账号" class="login_txtbx"/>
+        <input type="text" id="accountInput" placeholder="账号" class="login_txtbx"/>
     </dd>
     <dd class="pwd_icon">
-        <input type="password" placeholder="密码" class="login_txtbx"/>
+        <input type="password" id="passwordInput" placeholder="密码" class="login_txtbx"/>
     </dd>
     <dd class="val_icon">
         <div class="checkcode">
@@ -58,7 +58,8 @@
         createCode();
         //测试提交，对接程序删除即可
         $(".submit_btn").click(function(){
-            location.href="index.html";
+        //    location.href="index.html";
+            validate();
         });
     });
 </script>
