@@ -55,7 +55,7 @@ function submit(){
         type: "POST",
         async:false,
         success: function () {
-            alert("登录成功" + score);
+    //        alert("登录成功" + score);
     //        window.location.href = basePath +"logout"
         },
         error: doError
