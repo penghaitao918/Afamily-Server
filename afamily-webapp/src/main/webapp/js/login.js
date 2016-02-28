@@ -46,7 +46,7 @@ function validate () {
 function submit(){
     alert($("#accountInput").val() + " # " + $("#passwordInput").val());
     $.ajax({
-        url: basePath + "admin/user/addScore",
+        url: basePath + "admin/user/login",
         data: {
             account: $("#accountInput").val(),
             password: $("#passwordInput").val()

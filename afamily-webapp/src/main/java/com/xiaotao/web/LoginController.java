@@ -1,5 +1,8 @@
 package com.xiaotao.web;
 
+import com.xiaotao.user.model.User;
+import com.xiaotao.user.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -17,13 +20,16 @@ import javax.servlet.http.HttpServletRequest;
 @RequestMapping()
 public class LoginController {
 
+    @Autowired
+    private UserService userService;
+
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
     public String login(HttpServletRequest request) {
         return "login";
     }
 
-    @RequestMapping(value = "/login", method = {RequestMethod.POST})
-    public void loginPost() {
-
+    @RequestMapping(value = "/admin/user/login", method = {RequestMethod.POST})
+    public User loginPost(User user) {
+        return userService.loginCheck(user);
     }
 }

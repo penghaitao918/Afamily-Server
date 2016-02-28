@@ -11,6 +11,10 @@ public class SocketInfo {
     private InetAddress clientAddress = null;
     private String clientAccount = null;
 
+    public SocketInfo(){
+
+    }
+
     public SocketInfo(int port, InetAddress addr){
         this.clientPort = port;
         this.clientAddress = addr;
