@@ -50,7 +50,7 @@
 <script src="js/plugins/Particleground.js"></script>
 <script src="js/login.js"></script>
 <script>
-    $(document).ready(function() {
+    $(document).ready(function() {images
         //粒子背景特效
         $('body').particleground({
             dotColor: '#5cbdaa',
