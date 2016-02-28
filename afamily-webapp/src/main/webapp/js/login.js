@@ -46,7 +46,6 @@ function validate () {
 function submit(){
     var loginId = $("#accountInput").val();
     var password = $("#passwordInput").val();
-    alert("####123");
     $.ajax({
         url: basePath + "admin/user/login",
         data: {
