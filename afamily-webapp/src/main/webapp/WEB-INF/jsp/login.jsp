@@ -44,6 +44,7 @@
 <script src="js/plugins/jquery.js"></script>
 <script src="js/login.js"></script>
 <script src="js/plugins/Particleground.js"></script>
+<script src="js/common.js"></script>
 <script>
     $(document).ready(function() {
         //粒子背景特效

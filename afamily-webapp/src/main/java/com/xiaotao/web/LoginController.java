@@ -35,6 +35,10 @@ public class LoginController {
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
     public String login(HttpServletRequest request, HttpSession session) {
+        if (session.getAttribute("FLAG") == null){
+            session.setAttribute("FLAG",false);
+            return "index";
+        }
         if (!(Boolean)session.getAttribute("FLAG")){
     //        return "index";
         }
@@ -43,11 +47,12 @@ public class LoginController {
 
     @RequestMapping(value = "/admin/user/login", method = {RequestMethod.POST})
     @ResponseBody
-    public User loginPost(User user, HttpSession session) {
+    public User loginPost(User user) {
+        System.out.println("####44545");
         User admin = userService.loginCheck(user);
         if (admin != null){
-            session.setAttribute("FLAG",true);
-            session.setAttribute("INFO",admin);
+/*            session.setAttribute("FLAG",true);
+            session.setAttribute("INFO",admin);*/
         }
         return admin;
     }
