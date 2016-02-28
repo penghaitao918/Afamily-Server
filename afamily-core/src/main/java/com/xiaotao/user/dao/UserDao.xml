@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD iBatis Mapper 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xiaotao.user.dao.UserDao">
 
-    <select id="loginCheck" resultType="com.xiaotao.user.model.User">
-        SELECT * FROM sys_user WHERE login_id=#{username}
+    <select id="loginCheck" resultType="user">
+        SELECT * FROM sys_user WHERE login_id=#{account}
     </select>
 
 </mapper>
