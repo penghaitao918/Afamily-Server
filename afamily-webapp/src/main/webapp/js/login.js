@@ -44,9 +44,9 @@ function validate () {
 }
 
 function submit(){
-    alert("Success");
     var loginId = $("#accountInput").val();
     var password = $("#passwordInput").val();
+    alert("####123");
     $.ajax({
         url: basePath + "admin/user/login",
         data: {
@@ -58,6 +58,7 @@ function submit(){
         async:false,
         success:
             function (data) {
+    //            alert(JSON.stringify(data));
               if(password == data.password){
                     window.location.href = basePath;
                 }else{
