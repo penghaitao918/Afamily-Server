@@ -44,8 +44,9 @@
     </dd>
 </dl>
 
-<script src="js/login.js"></script>
 <script src="js/plugins/jquery.js"></script>
+<script src="js/common.js"></script>
+<script src="js/login.js"></script>
 <script src="js/plugins/Particleground.js"></script>
 <script>
     $(document).ready(function() {

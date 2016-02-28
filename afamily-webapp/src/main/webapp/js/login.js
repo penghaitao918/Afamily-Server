@@ -48,14 +48,14 @@ function submit(){
     $.ajax({
         url: basePath + "admin/user/login",
         data: {
-            account: $("#accountInput").val(),
+            username: $("#accountInput").val(),
             password: $("#passwordInput").val()
         },
         dataType: "json",
         type: "POST",
         async:false,
-        success: function () {
-            alert("登录成功" + score);
+        success: function (data) {
+            alert("登录成功 " + JSON.stringify(data));
     //        window.location.href = basePath +"logout"
         },
         error: doError
