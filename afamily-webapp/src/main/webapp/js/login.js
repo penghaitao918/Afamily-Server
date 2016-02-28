@@ -57,15 +57,20 @@ function submit(){
         async:false,
         success:
             function (data) {
-                alert(JSON.stringify(data));
-/*              if(password == data.password){
+              if(password == data.password){
                     window.location.href = basePath;
                 }else{
                     createCode();
                     alert("密码错误");
-                }*/
+                }
             },
-        error: alert("账号错误")
-
+        error: function(){
+            createCode();
+            alert("账号错误")
+        }
     });
+}
+
+function login(){
+
 }
