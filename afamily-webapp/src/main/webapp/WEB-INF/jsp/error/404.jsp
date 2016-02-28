@@ -6,7 +6,7 @@
     <!--[if lt IE 9]>
     <link rel="stylesheet" type="text/css" href="css/ie8.css" />
     <![endif]-->
-    <title>404 - Not found</title>
+    <title>404 - File Not found</title>
 </head>
 <body>
 <div id="wrapper">
@@ -48,7 +48,7 @@
 </div>
 
 <script type="text/javascript" src="js/plugins/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/custom-scripts.js"></script>
+<script type="text/javascript" src="js/error404.js"></script>
 <script type="text/javascript" src="js/jquery.tipsy.js"></script>
 <script type="text/javascript">
     $(document).ready(function(){
