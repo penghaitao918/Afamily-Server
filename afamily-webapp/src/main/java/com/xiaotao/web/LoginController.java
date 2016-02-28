@@ -32,6 +32,7 @@ public class LoginController {
     @RequestMapping(value = "/admin/user/login", method = {RequestMethod.POST})
     @ResponseBody
     public User loginPost(User user) {
+        System.out.println("### " + userService.loginCheck(user));
         return userService.loginCheck(user);
     }
 }

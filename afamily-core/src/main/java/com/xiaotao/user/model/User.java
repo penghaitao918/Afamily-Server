@@ -6,20 +6,13 @@ package com.xiaotao.user.model;
 public class User {
 
     private int userId;
-    private String username;
-    private String loginName;
+    private String userName;
+    private String loginId;
     private String password;
 
     public User(){
 
     }
-
-/*    public User(User user){
-        this.userId = user.getUserId();
-        this.username = user.getUsername();
-        this.loginName = user.getLoginName();
-        this.password = user.getPassword();
-    }*/
 
     public void setUserId(int userId) {
         this.userId = userId;
@@ -30,19 +23,19 @@ public class User {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.userName = username;
     }
 
     public String getUsername() {
-        return username;
+        return userName;
     }
 
-    public void setLoginName(String loginName) {
-        this.loginName = loginName;
+    public void setLoginId(String loginId) {
+        this.loginId = loginId;
     }
 
-    public String getLoginName() {
-        return loginName;
+    public String getLoginId() {
+        return loginId;
     }
 
     public void setPassword(String password) {
