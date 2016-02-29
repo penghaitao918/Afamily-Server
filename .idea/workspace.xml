@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c01dcdf2-25a4-4367-aa5c-87b8b6e18a6f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/model/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/model/SocketInfo.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/model/SocketInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/images/500.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="wind.iws" />
@@ -142,94 +136,42 @@
       <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="14" selection-start="1875" selection-end="1875" vertical-scroll-proportion="-23.0" vertical-offset="515" max-vertical-offset="1406">
+            <state line="0" column="0" selection-start="0" selection-end="144" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1349">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js">
+      <file leaf-file-name="404.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="19" selection-start="1568" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1292">
+            <state line="15" column="0" selection-start="613" selection-end="629" vertical-scroll-proportion="-6.107143" vertical-offset="114" max-vertical-offset="1520">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginController.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java">
+      <file leaf-file-name="500.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.51686615" vertical-offset="0" max-vertical-offset="919">
+            <state line="6" column="4" selection-start="140" selection-end="145" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="475">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="User.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/model/User.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="5" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="1159">
-              <folding>
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#519#520#0" expanded="true" />
-                <element signature="e#549#550#0" expanded="true" />
-                <element signature="e#578#579#0" expanded="true" />
-                <element signature="e#626#627#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#701#702#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#860#861#0" expanded="true" />
-                <element signature="e#892#893#0" expanded="true" />
-                <element signature="e#940#941#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1015#1016#0" expanded="true" />
-                <element signature="e#1046#1047#0" expanded="true" />
-              </folding>
-            </state>
+      <file leaf-file-name="500.jpg" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/images/500.jpg">
+          <provider selected="true" editor-type-id="images">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/UserService.java">
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="19" selection-start="161" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
+            <state line="14" column="32" selection-start="440" selection-end="440" vertical-scroll-proportion="0.5175097" vertical-offset="0" max-vertical-offset="514">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserServiceImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/impl/UserServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="28" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="1" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserDao.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="9" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
-              <folding>
-                <marker date="1456648513281" expanded="true" signature="285:333" placeholder="SELECT * FRO..sys_user..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -259,23 +201,25 @@
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/HomeController.java" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/afamily-servlet.xml" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/ServerSocketListener.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/SocketThread.java" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/resources/applicationProperties.properties" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/model/SocketInfo.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/model/User.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/test.xsl" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/UserService.java" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.xml" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/main.css" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" />
       </list>
     </option>
   </component>
@@ -492,10 +436,6 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -520,6 +460,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="images" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -985,19 +929,21 @@
       <recent name="com.wind.user.dao" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\Server\afamily-webapp\src\main\webapp\images" />
       <recent name="D:\workspace\Server\afamily-core\src\main\java\com\xiaotao\user\dao" />
       <recent name="F:\ACMerHome\Server\afamily-core\src\main\java\com\xiaotao\socket\model" />
       <recent name="F:\ACMerHome\Server\afamily-core\src\main\java\com\xiaotao\socket" />
       <recent name="F:\ACMerHome\Server\afamily-webapp\src\main\webapp\WEB-INF\jsp\error" />
-      <recent name="F:\ACMerHome\Server\afamily-webapp\src\main\webapp\css" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.xiaotao.user.service" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\Server\afamily-webapp\src\main\webapp\images" />
+      <recent name="D:\workspace\Server\afamily-webapp\src\main\webapp\WEB-INF\jsp" />
+      <recent name="D:\workspace\Server\afamily-webapp\src\main\webapp\WEB-INF\jsp\error" />
+      <recent name="D:\workspace\Server\afamily-webapp\src\main\webapp\WEB-INF" />
       <recent name="D:\Project\wind\wind-core\src\test" />
-      <recent name="D:\Project\wind\wind-webapp\src\main\webapp\WEB-INF\jsp" />
-      <recent name="D:\Project\wind\wind-webapp\src\main\webapp\plugins\jquery" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat">
@@ -1355,7 +1301,13 @@
       <workItem from="1456591302228" duration="64000" />
       <workItem from="1456591370206" duration="2488000" />
       <workItem from="1456636354073" duration="807000" />
-      <workItem from="1456644103055" duration="4398000" />
+      <workItem from="1456644103055" duration="6821000" />
+      <workItem from="1456671339256" duration="860000" />
+      <workItem from="1456674510145" duration="915000" />
+      <workItem from="1456676394278" duration="11000" />
+      <workItem from="1456676657587" duration="14000" />
+      <workItem from="1456730479275" duration="3759000" />
+      <workItem from="1456744399792" duration="1432000" />
     </task>
     <task id="LOCAL-00001" summary="# 2016/2/28">
       <created>1456593504211</created>
@@ -1369,11 +1321,15 @@
       <created>1456645931782</created>
       <updated>1456645931782</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="# 2016/2/28&#10;# login 实现&#10;">
+      <created>1456648535380</created>
+      <updated>1456648535380</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110357000" />
+    <option name="totallyTimeSpent" value="119771000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1402,7 +1358,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21156661" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24010417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39957717" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39852008" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32991454" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1458,7 +1414,8 @@
     <MESSAGE value="# 2016/2/28" />
     <MESSAGE value="# 2016/2/28&#10;# login UI&#10;" />
     <MESSAGE value="# 2016/2/28&#10;# login 实现&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 2016/2/28&#10;# login 实现&#10;" />
+    <MESSAGE value="# 2016/2/28&#10;# error500&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 2016/2/28&#10;# error500&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1473,23 +1430,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/SocketThread.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0" vertical-offset="760" max-vertical-offset="1615">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#581#593#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="1672">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="23" selection-start="342" selection-end="342" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1387">
@@ -1506,23 +1446,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="773" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="912">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="773" selection-end="794" vertical-scroll-proportion="0.0" vertical-offset="532" max-vertical-offset="912" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="152" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="342">
-          <folding />
-        </state>
+        <state line="3" column="18" selection-start="152" selection-end="165" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="342" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3496">
-          <folding />
-        </state>
+        <state line="18" column="28" selection-start="705" selection-end="705" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/web.xml">
@@ -1534,9 +1468,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="35" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="3496">
-          <folding />
-        </state>
+        <state line="9" column="35" selection-start="447" selection-end="447" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="3496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/web.xml">
@@ -1548,23 +1480,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="16" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="3496">
-          <folding />
-        </state>
+        <state line="15" column="16" selection-start="566" selection-end="566" vertical-scroll-proportion="0.0" vertical-offset="81" max-vertical-offset="3496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="3249">
-          <folding />
-        </state>
+        <state line="3" column="27" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="3249" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="2584">
-          <folding />
-        </state>
+        <state line="7" column="38" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="2584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
@@ -1579,9 +1505,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3496">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
@@ -1608,9 +1532,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
@@ -1630,37 +1552,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/test/resources/applicationContext-test.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="71" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="950">
-          <folding />
-        </state>
+        <state line="38" column="71" selection-start="2157" selection-end="2157" vertical-scroll-proportion="0.0" vertical-offset="551" max-vertical-offset="950" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="27" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3249">
-          <folding />
-        </state>
+        <state line="3" column="27" selection-start="251" selection-end="251" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3249" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="38" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2584">
-          <folding />
-        </state>
+        <state line="7" column="38" selection-start="406" selection-end="406" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2584" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="28" selection-start="705" selection-end="705" vertical-scroll-proportion="0.5029412" vertical-offset="171" max-vertical-offset="3496">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="18" selection-start="152" selection-end="165" vertical-scroll-proportion="0.098615915" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
+        <state line="18" column="28" selection-start="705" selection-end="705" vertical-scroll-proportion="0.5029412" vertical-offset="171" max-vertical-offset="3496" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/style.css">
@@ -1668,47 +1575,22 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3781" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="291" selection-end="291" vertical-scroll-proportion="0.29584774" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="7" selection-start="291" selection-end="291" vertical-scroll-proportion="0.29584774" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="0" selection-start="773" selection-end="794" vertical-scroll-proportion="0.3729373" vertical-offset="21" max-vertical-offset="627">
-          <folding />
-        </state>
+        <state line="28" column="0" selection-start="773" selection-end="794" vertical-scroll-proportion="0.3729373" vertical-offset="21" max-vertical-offset="627" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1558">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/ServerSocketListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="0" selection-start="29" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="171" max-vertical-offset="779">
-          <folding />
-        </state>
+        <state line="14" column="13" selection-start="307" selection-end="307" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1558" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/SocketThread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="0" selection-start="244" selection-end="244" vertical-scroll-proportion="0.36414048" vertical-offset="12" max-vertical-offset="1615">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#581#593#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#581#593#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1729,16 +1611,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/resources/applicationProperties.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="22" selection-start="275" selection-end="275" vertical-scroll-proportion="0.21072088" vertical-offset="0" max-vertical-offset="541">
-          <folding />
-        </state>
+        <state line="6" column="22" selection-start="275" selection-end="275" vertical-scroll-proportion="0.21072088" vertical-offset="0" max-vertical-offset="541" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/ｔ">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="610" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/model/SocketInfo.java">
@@ -1757,86 +1635,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/resources/mybatisConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="5" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0" vertical-offset="57" max-vertical-offset="1159">
-          <folding>
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#519#520#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#578#579#0" expanded="true" />
-            <element signature="e#626#627#0" expanded="true" />
-            <element signature="e#666#667#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#824#825#0" expanded="true" />
-            <element signature="e#860#861#0" expanded="true" />
-            <element signature="e#892#893#0" expanded="true" />
-            <element signature="e#940#941#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-            <element signature="e#1015#1016#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="19" selection-start="161" selection-end="172" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="342">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/impl/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="28" selection-start="513" selection-end="513" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="551">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="1" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="919" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="9" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
-          <folding>
-            <marker date="1456648513281" expanded="true" signature="285:333" placeholder="SELECT * FRO..sys_user..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="14" selection-start="1875" selection-end="1875" vertical-scroll-proportion="-23.0" vertical-offset="515" max-vertical-offset="1406">
+        <state line="8" column="9" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="266">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="19" selection-start="1568" selection-end="1575" vertical-scroll-proportion="0.0" vertical-offset="386" max-vertical-offset="1292">
-          <folding />
-        </state>
+        <state line="61" column="0" selection-start="1846" selection-end="1846" vertical-scroll-proportion="0.6578366" vertical-offset="563" max-vertical-offset="1482" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/common.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="9" selection-start="564" selection-end="564" vertical-scroll-proportion="0.56583244" vertical-offset="31" max-vertical-offset="950" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1031" selection-end="1031" vertical-scroll-proportion="0.51686615" vertical-offset="0" max-vertical-offset="919">
+        <state line="36" column="74" selection-start="1198" selection-end="1198" vertical-scroll-proportion="0.5038085" vertical-offset="221" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="5" selection-start="228" selection-end="228" vertical-scroll-proportion="0.28944504" vertical-offset="0" max-vertical-offset="919">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="19" selection-start="161" selection-end="172" vertical-scroll-proportion="0.18607181" vertical-offset="0" max-vertical-offset="919">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="28" selection-start="513" selection-end="513" vertical-scroll-proportion="0.3101197" vertical-offset="0" max-vertical-offset="919">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/user/dao/UserDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="1" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="144" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="1349">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/images/500.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/404.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="613" selection-end="629" vertical-scroll-proportion="-6.107143" vertical-offset="114" max-vertical-offset="1520">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="224" column="1" selection-start="3251" selection-end="3251" vertical-scroll-proportion="0.7896679" vertical-offset="3828" max-vertical-offset="4370">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="4" selection-start="140" selection-end="145" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="475">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="32" selection-start="440" selection-end="440" vertical-scroll-proportion="0.5175097" vertical-offset="0" max-vertical-offset="514">
           <folding />
         </state>
       </provider>

@@ -1,12 +1,19 @@
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html lang="zh-CN">
+<%--
+  Created by IntelliJ IDEA.
+  User: tao
+  Date: 16-2-28
+  Time: 上午1:22
+  To change this template use File | Settings | File Templates.
+--%>
+<html>
 <head>
-    <title>主页</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTTP-Internal Server Error</title>
+    <style type = "text/css">
+        .body-background{ max-width: 100%; height: auto; background-size: 100%; background-position: center; background: url('../../images/500.jpg'); }
+    </style>
 </head>
-<body>
-<h1>Hello world</h1>
+<body class = "body-background">
+<%--<body background="500.jpg">--%>
+<h2>Hello World!</h2>
 </body>
 </html>
