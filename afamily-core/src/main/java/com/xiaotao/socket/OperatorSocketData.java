@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.net.SocketException;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -22,6 +23,13 @@ public class OperatorSocketData implements Runnable{
     private Socket s = null;
     // 该线程所处理的Socket所对应的输入流
     private BufferedReader br = null;
+    // 保存socketList中每个socket的信息
+    public static ArrayList<SocketInfo> socketInfo = new ArrayList<SocketInfo>();
+    /*                SocketInfo socketInfo1 = new SocketInfo(socket.getPort(),socket.getInetAddress());*/
+    //  客户端地址
+    //         System.out.println("###getInetAddress # " + socket.getInetAddress());
+    //  客户端端口
+    //         System.out.println("###getPort # " + socket.getPort());
 
     public OperatorSocketData(Socket s) throws IOException {
         this.s = s;
@@ -69,6 +77,7 @@ public class OperatorSocketData implements Runnable{
             case SocketInfo.login:
                 User user = new User(jsonObject);
                 System.out.println("Login # " + user);
+                // 登陆返回参数，true成功，false失败，成功则将登录信息添加如list
                 break;
                    //  TODO:实现客户端与服务器的一对一交流，暂未实现客户端之间的交流
             // 遍历socketList中的每个Socket，

@@ -18,8 +18,6 @@ public class SocketThread extends Thread {
 
     // 定义保存所有Socket的ArrayList
     public static ArrayList<Socket> socketList = new ArrayList<Socket>();
-    // 保存socketList中每个socket的信息
-    public static ArrayList<SocketInfo> socketInfo = new ArrayList<SocketInfo>();
 
     private ServerSocket serverSocket = null;
     private ServletContext servletContext = null;
@@ -47,12 +45,6 @@ public class SocketThread extends Thread {
             try {
                 // 此行代码会阻塞，将一直等待别人的连接
                 Socket socket = serverSocket.accept();
-/*                SocketInfo socketInfo1 = new SocketInfo(socket.getPort(),socket.getInetAddress());*/
-                //  客户端地址
-       //         System.out.println("###getInetAddress # " + socket.getInetAddress());
-                //  客户端端口
-       //         System.out.println("###getPort # " + socket.getPort());
-
                 socketList.add(socket);
        //         System.out.println("###连接成功");
                 if(socket != null)
