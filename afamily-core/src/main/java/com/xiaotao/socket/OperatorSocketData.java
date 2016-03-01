@@ -1,5 +1,9 @@
 package com.xiaotao.socket;
 
+import com.xiaotao.socket.model.SocketInfo;
+import com.xiaotao.user.model.User;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -27,43 +31,21 @@ public class OperatorSocketData implements Runnable{
 
     public void run()
     {
-        try
+        String content = null;
+        // 采用循环不断从Socket中读取客户端发送过来的数据
+        while ((content = readFromClient()) != null)
         {
-            String content = null;
-            // 采用循环不断从Socket中读取客户端发送过来的数据
-            while ((content = readFromClient()) != null)
-            {
-                System.out.println("客户端--->服务器：  " + content);
-                System.out.println("--A-" + Arrays.toString(content.getBytes("utf-8")));
-
-                //  TODO:实现客户端与服务器的一对一交流，暂未实现客户端之间的交流
-                // 遍历socketList中的每个Socket，
-                // 将读到的内容向每个Socket发送一次
-                //           for (Iterator<Socket> it = WebServer.socketList.iterator(); it.hasNext(); )
-                //           {
-                //               Socket s = it.next();
-                try{
-
-                    OutputStream os = s.getOutputStream();
-                    os.write((content + "\r\n").getBytes("utf-8"));
-                    System.out.println("服务器--->客户端：  content + --C-- " + content);
-                }
-                catch(SocketException e)
-                {
-                    e.printStackTrace();
-                    // 删除该Socket。
-                    //            it.remove();
-                    s.close();
-                    System.out.println(SocketThread.socketList);
-                }
-                //           }
+            System.out.println("客户端--->服务器：  " + content);
+            try {
+                JSONObject jsonObject = new JSONObject(content);
+                int type = jsonObject.getInt(SocketInfo.JSONType);
+                dealWithUserRequest(type,jsonObject);
+            }catch (Exception e){
+                e.printStackTrace();
             }
         }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-        }
     }
+
     // 定义读取客户端数据的方法
     private String readFromClient()
     {
@@ -79,5 +61,21 @@ public class OperatorSocketData implements Runnable{
             SocketThread.socketList.remove(s);
         }
         return null;
+    }
+
+    //  定义处理用户请求的方法
+    private void dealWithUserRequest(int type, JSONObject jsonObject){
+        switch (type){
+            case SocketInfo.login:
+                User user = new User(jsonObject);
+                System.out.println("Login # " + user);
+                break;
+                   //  TODO:实现客户端与服务器的一对一交流，暂未实现客户端之间的交流
+            // 遍历socketList中的每个Socket，
+            // 将读到的内容向每个Socket发送一次
+            //           for (Iterator<Socket> it = WebServer.socketList.iterator(); it.hasNext(); )
+            //           {
+            //               Socket s = it.next();
+        }
     }
 }

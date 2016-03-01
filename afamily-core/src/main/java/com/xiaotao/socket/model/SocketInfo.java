@@ -15,9 +15,10 @@ public class SocketInfo {
 
     }
 
-    public SocketInfo(int port, InetAddress addr){
+    public SocketInfo(int port, InetAddress addr, String account){
         this.clientPort = port;
         this.clientAddress = addr;
+        this.clientAccount = account;
     }
 
     public void setClientPort(int clientPort) {
@@ -43,4 +44,8 @@ public class SocketInfo {
     public String getClientAccount() {
         return clientAccount;
     }
+
+    public static final String JSONType = "CONNECT_TYPE";
+    public static final int notify = 0;
+    public static final int login = 1;
 }

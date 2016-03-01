@@ -49,12 +49,12 @@ public class SocketThread extends Thread {
                 Socket socket = serverSocket.accept();
 /*                SocketInfo socketInfo1 = new SocketInfo(socket.getPort(),socket.getInetAddress());*/
                 //  客户端地址
-                System.out.println("###getInetAddress # " + socket.getInetAddress());
+       //         System.out.println("###getInetAddress # " + socket.getInetAddress());
                 //  客户端端口
-                System.out.println("###getPort # " + socket.getPort());
+       //         System.out.println("###getPort # " + socket.getPort());
 
                 socketList.add(socket);
-                System.out.println("###连接成功");
+       //         System.out.println("###连接成功");
                 if(socket != null)
                 {
                     // 每当客户端连接后启动一条ServerThread线程为该客户端服务

@@ -1,9 +1,15 @@
 package com.xiaotao.user.model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Created by tao on 16-2-28.
  */
 public class User {
+
+    public static final String accountFlag = "LOGIN_ACCOUNT";
+    public static final String passwordFlag = "LOGIN_PASSWORD";
 
     private int userId;
     private String userName;
@@ -12,6 +18,15 @@ public class User {
 
     public User(){
 
+    }
+
+    public User(JSONObject jsonObject) {
+        try {
+            this.loginId = jsonObject.getString(accountFlag);
+            this.password = jsonObject.getString(passwordFlag);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
     }
 
     public void setUserId(int userId) {
