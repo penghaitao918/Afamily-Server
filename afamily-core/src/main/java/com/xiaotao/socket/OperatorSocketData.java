@@ -2,6 +2,7 @@ package com.xiaotao.socket;
 
 import com.xiaotao.socket.model.SocketInfo;
 import com.xiaotao.user.model.User;
+import com.xiaotao.util.JSONUtil;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -46,7 +47,7 @@ public class OperatorSocketData implements Runnable{
             System.out.println("客户端--->服务器：  " + content);
             try {
                 JSONObject jsonObject = new JSONObject(content);
-                int type = jsonObject.getInt(SocketInfo.JSONType);
+                int type = jsonObject.getInt(JSONUtil.JSONType);
                 dealWithUserRequest(type,jsonObject);
             }catch (Exception e){
                 e.printStackTrace();
@@ -74,7 +75,7 @@ public class OperatorSocketData implements Runnable{
     //  定义处理用户请求的方法
     private void dealWithUserRequest(int type, JSONObject jsonObject){
         switch (type){
-            case SocketInfo.login:
+            case JSONUtil.login:
                 User user = new User(jsonObject);
                 System.out.println("Login # " + user);
                 // 登陆返回参数，true成功，false失败，成功则将登录信息添加如list

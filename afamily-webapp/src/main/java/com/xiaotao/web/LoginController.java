@@ -30,7 +30,7 @@ public class LoginController {
         if (session.getAttribute("FLAG") == null){
             session.setAttribute("FLAG",false);
         }
-        return "index";
+        return "redirect:/login";
     }
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
