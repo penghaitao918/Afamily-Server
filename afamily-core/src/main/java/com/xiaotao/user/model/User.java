@@ -42,6 +42,7 @@ public class User {
 
     //  info
     public static final class info {
+        public static final String loginFlag = "LOGIN_FLAG";
         public static final String account = "USER_ACCOUNT";
         public static final String password = "USER_PASSWORD";
         public static final String portrait = "USER_PORTRAIT";

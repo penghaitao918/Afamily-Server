@@ -22,7 +22,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User studentLogin(User user) {
-        System.out.println("### " + user.getLoginId());
         return userDao.studentLogin(user);
     }
 

@@ -29,6 +29,7 @@ public class SocketThread extends Thread {
         {
             try {
                 this.serverSocket = new ServerSocket(30000);
+                System.out.println("###创建成功");
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -46,7 +47,7 @@ public class SocketThread extends Thread {
                 // 此行代码会阻塞，将一直等待别人的连接
                 Socket socket = serverSocket.accept();
                 socketList.add(socket);
-       //         System.out.println("###连接成功");
+                System.out.println("###连接成功");
                 if(socket != null)
                 {
                     // 每当客户端连接后启动一条ServerThread线程为该客户端服务
