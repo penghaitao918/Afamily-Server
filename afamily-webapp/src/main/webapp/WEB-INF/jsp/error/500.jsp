@@ -22,6 +22,6 @@
     </style>
 </head>
 <body class = "body-background">
-<h2>Hello World!</h2>
+<h2> HTTP-Internal Server Error</h2>
 </body>
 </html>

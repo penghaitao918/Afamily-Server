@@ -1,5 +1,8 @@
 package com.xiaotao.socket.dao;
 
+import com.xiaotao.socket.model.SocketInfo;
+import com.xiaotao.user.model.User;
+
 /**
  * ━━━━━━神兽出没━━━━━━
  * 　　　┏┓　　　┏┓
@@ -26,4 +29,7 @@ package com.xiaotao.socket.dao;
  * @date 2016-02-28  下午10:49
  */
 public interface SocketDao {
+
+    SocketInfo loginCheck(SocketInfo socketInfo);
+
 }

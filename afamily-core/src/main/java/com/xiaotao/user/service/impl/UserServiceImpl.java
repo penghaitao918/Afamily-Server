@@ -16,8 +16,14 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
 
     @Override
-    public User loginCheck(User user) {
-        return userDao.loginCheck(user);
+    public User adminLogin(User user) {
+        return userDao.adminLogin(user);
+    }
+
+    @Override
+    public User studentLogin(User user) {
+        System.out.println("### " + user.getLoginId());
+        return userDao.studentLogin(user);
     }
 
 }

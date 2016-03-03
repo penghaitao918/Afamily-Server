@@ -7,6 +7,8 @@ import com.xiaotao.user.model.User;
  */
 public interface UserService {
 
-    User loginCheck(User user);
+    User adminLogin(User user);
+
+    User studentLogin(User user);
 
 }

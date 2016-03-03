@@ -49,7 +49,7 @@ function submit(){
     $.ajax({
         url: basePath + "admin/user/login",
         data: {
-            username:loginId,
+            loginId: loginId,
             password: password
         },
         dataType: "json",

@@ -7,10 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import javax.security.auth.Subject;
-import javax.security.sasl.AuthenticationException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -19,7 +16,6 @@ import javax.servlet.http.HttpSession;
  */
 
 @Controller
-@RequestMapping()
 public class LoginController {
 
     @Autowired
@@ -30,7 +26,8 @@ public class LoginController {
         if (session.getAttribute("FLAG") == null){
             session.setAttribute("FLAG",false);
         }
-        return "redirect:/login";
+        return "index";
+    //    return "redirect:/login";
     }
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
@@ -43,8 +40,8 @@ public class LoginController {
 
     @RequestMapping(value = "/admin/user/login", method = {RequestMethod.POST})
     @ResponseBody
-    public User loginPost(User user,HttpSession session) {
-        User admin = userService.loginCheck(user);
+    public User loginPost(User user, HttpSession session) {
+        User admin = userService.adminLogin(user);
         if (admin != null){
             session.setAttribute("FLAG",true);
             session.setAttribute("INFO",admin);

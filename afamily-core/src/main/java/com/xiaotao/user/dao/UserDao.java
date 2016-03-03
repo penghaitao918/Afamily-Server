@@ -9,6 +9,8 @@ import com.xiaotao.user.model.User;
 @MyBatisScan
 public interface UserDao {
 
-    User loginCheck(User user);
+    User adminLogin(User user);
+
+    User studentLogin(User user);
 
 }

@@ -2,4 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD iBatis Mapper 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xiaotao.socket.dao.SocketDao">
 
+    <select id="loginCheck" resultType="com.xiaotao.socket.model.SocketInfo">
+        SELECT * FROM student_user WHERE student_id=#{userName}
+    </select>
+
 </mapper>

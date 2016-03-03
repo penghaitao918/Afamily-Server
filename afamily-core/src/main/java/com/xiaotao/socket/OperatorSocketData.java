@@ -2,8 +2,12 @@ package com.xiaotao.socket;
 
 import com.xiaotao.socket.model.SocketInfo;
 import com.xiaotao.user.model.User;
+import com.xiaotao.user.service.UserService;
 import com.xiaotao.util.JSONUtil;
+import org.json.JSONException;
 import org.json.JSONObject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +22,7 @@ import java.util.Arrays;
  * Created by tao on 16-2-26.
  * 将socket服务器得到数据进行处理
  */
+@Component
 public class OperatorSocketData implements Runnable{
 
     // 定义当前线程所处理的Socket
@@ -31,6 +36,8 @@ public class OperatorSocketData implements Runnable{
     //         System.out.println("###getInetAddress # " + socket.getInetAddress());
     //  客户端端口
     //         System.out.println("###getPort # " + socket.getPort());
+
+    public OperatorSocketData(){ }
 
     public OperatorSocketData(Socket s) throws IOException {
         this.s = s;
@@ -72,13 +79,22 @@ public class OperatorSocketData implements Runnable{
         return null;
     }
 
+    @Autowired
+    private UserService userService;
     //  定义处理用户请求的方法
-    private void dealWithUserRequest(int type, JSONObject jsonObject){
+
+    private void dealWithUserRequest(int type, JSONObject jsonObject) throws JSONException {
         switch (type){
+            case JSONUtil.check:
+                System.out.print(jsonObject.getString(JSONUtil.connectCheck));
+                break;
             case JSONUtil.login:
                 User user = new User(jsonObject);
-                System.out.println("Login # " + user);
-                // 登陆返回参数，true成功，false失败，成功则将登录信息添加如list
+                JSONUtil jsonUtil = new JSONUtil();
+                User admin = userService.studentLogin(user);
+                System.out.println(admin);
+                ServerSend send = new ServerSend(jsonUtil.login(userService.studentLogin(user)));
+                new Thread(send).start();
                 break;
                    //  TODO:实现客户端与服务器的一对一交流，暂未实现客户端之间的交流
             // 遍历socketList中的每个Socket，
@@ -86,6 +102,23 @@ public class OperatorSocketData implements Runnable{
             //           for (Iterator<Socket> it = WebServer.socketList.iterator(); it.hasNext(); )
             //           {
             //               Socket s = it.next();
+        }
+    }
+
+    public class ServerSend implements Runnable {
+        private JSONObject jsonObject = null;
+        public ServerSend(JSONObject jsonObject) {
+            this.jsonObject = jsonObject;
+        }
+        @Override
+        public void run()
+        {
+            try{
+                OutputStream outputStream = s.getOutputStream();
+                outputStream.write((jsonObject + "\r\n").getBytes("utf-8"));
+            }catch (Exception e) {
+                e.printStackTrace();
+            }
         }
     }
 }
