@@ -15,6 +15,7 @@ public class JSONUtil {
     public static final int check = -1;
     public static final int notify = 0;
     public static final int login = 1;
+    public static final int logout = 2;
 
     //  心跳检测
     public static JSONObject connectCheck() {
@@ -49,4 +50,16 @@ public class JSONUtil {
         }
         return loginJSON;
     }
+
+    //  logout
+    public static JSONObject logout(){
+        JSONObject logoutJSON = new JSONObject();
+        try {
+            logoutJSON.put(JSONType, logout);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return logoutJSON;
+    }
+
 }

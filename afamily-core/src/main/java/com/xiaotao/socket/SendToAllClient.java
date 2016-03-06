@@ -1,5 +1,6 @@
 package com.xiaotao.socket;
 
+import com.xiaotao.socket.model.SocketInfo;
 import com.xiaotao.util.JSONUtil;
 
 import java.io.OutputStream;
@@ -36,8 +37,9 @@ import java.util.Iterator;
 public class SendToAllClient {
     // 遍历socketList中的每个Socket，
     // 将读到的内容向每个Socket发送一次
+    //   todo   每过一段时间对所有两个list进行遍历，删掉无用client
 
-   private void checkSocket(){
+   public static void closeAllSocketAndServerSocket(){
        new Thread(new Runnable() {
            @Override
            public void run() {
@@ -45,7 +47,10 @@ public class SendToAllClient {
                    for (Iterator<Socket> iterator = SocketThread.socketList.iterator(); iterator.hasNext();){
                        Socket socket = iterator.next();
                        OutputStream outputStream = socket.getOutputStream();
-                       outputStream.write((JSONUtil.connectCheck() + "\r\n").getBytes("utf-8"));
+                       outputStream.write((JSONUtil.logout() + "\r\n").getBytes("utf-8"));
+                       socket.close();
+                       SocketThread.socketList.remove(socket);
+                       socket = null;
                    }
                }catch (Exception e){
                    e.printStackTrace();

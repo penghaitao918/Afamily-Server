@@ -1,6 +1,5 @@
 package com.xiaotao.socket;
 
-import com.sun.corba.se.spi.activation.Server;
 import com.xiaotao.socket.model.SocketInfo;
 import com.xiaotao.user.model.User;
 import com.xiaotao.user.service.UserService;
@@ -9,16 +8,14 @@ import com.xiaotao.util.SpringUtil;
 import org.json.JSONException;
 import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Iterator;
 
 /**
  * Created by tao on 16-2-26.
@@ -32,11 +29,13 @@ public class OperatorSocketData implements Runnable{
     // 该线程所处理的Socket所对应的输入流
     private BufferedReader br = null;
     // 保存socketList中每个socket的信息
+    private SocketInfo socketInfo = null;
     public static ArrayList<SocketInfo> socketInfoArrayList = new ArrayList<SocketInfo>();
 
     public OperatorSocketData(Socket s) throws IOException {
         this.s = s;
         // 初始化该Socket对应的输入流
+        System.out.println("socket # " + s.getInetAddress());
         br = new BufferedReader(new InputStreamReader(s.getInputStream() , "utf-8"));
     }
 
@@ -69,7 +68,7 @@ public class OperatorSocketData implements Runnable{
         {
             e.printStackTrace();
             // 删除该Socket。
-            SocketThread.socketList.remove(s);
+            closeSocket();
         }
         return null;
     }
@@ -79,21 +78,24 @@ public class OperatorSocketData implements Runnable{
     //  定义处理用户请求的方法
 
     private void dealWithUserRequest(int type, JSONObject jsonObject) throws JSONException {
+        for (Iterator<Socket> iterator = SocketThread.socketList.iterator(); iterator.hasNext();){
+            Socket socket = iterator.next();
+            System.out.println(socket);
+        }
         ServerSend serverSend = null;
-        JSONUtil jsonUtil = new JSONUtil();
         switch (type){
-            case JSONUtil.check:
-                serverSend = new ServerSend(jsonUtil.connectCheck());
+            case JSONUtil.logout:
+                closeSocket();
                 break;
             case JSONUtil.login:
                 User client = new User(jsonObject);
                 User server = userService.studentLogin(client);
                 if (server != null && client.getPassword().equals(server.getPassword())){
-                    serverSend = new ServerSend(jsonUtil.login(server));
-                    SocketInfo socketInfo = new SocketInfo(s.getPort(),s.getInetAddress(),client.getLoginId());
+                    serverSend = new ServerSend(JSONUtil.login(server));
+                    socketInfo = new SocketInfo(s.getPort(),s.getInetAddress(),client.getLoginId());
                     socketInfoArrayList.add(socketInfo);
                 }else {
-                    serverSend = new ServerSend(jsonUtil.login(null));
+                    serverSend = new ServerSend(JSONUtil.login(null));
                 }
                 break;
             //  TODO:实现客户端与服务器的一对一交流，暂未实现客户端之间的交流
@@ -101,6 +103,23 @@ public class OperatorSocketData implements Runnable{
         new Thread(serverSend).start();
     }
 
+    private void closeSocket(){
+        if (socketInfo != null) {
+            socketInfoArrayList.remove(socketInfo);
+        }
+        if (s != null) {
+            SocketThread.socketList.remove(s);
+            System.out.println(s + " is close");
+            try {
+                s.close();
+                s = null;
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    //  发送至client
     public class ServerSend implements Runnable {
         private JSONObject jsonObject = null;
         public ServerSend(JSONObject jsonObject) {

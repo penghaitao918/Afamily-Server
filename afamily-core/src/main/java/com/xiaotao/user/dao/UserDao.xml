@@ -7,7 +7,7 @@
     </select>
 
     <select id="studentLogin" resultType="com.xiaotao.user.model.User">
-        SELECT * FROM student_user WHERE student_id=#{loginId}
+        SELECT * FROM student_user WHERE login_id=#{loginId}
     </select>
 
 </mapper>

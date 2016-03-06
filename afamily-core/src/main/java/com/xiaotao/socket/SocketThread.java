@@ -22,7 +22,6 @@ public class SocketThread extends Thread {
     private ServerSocket serverSocket = null;
     private ServletContext servletContext = null;
 
-
     public SocketThread(ServerSocket serverSocket,ServletContext servletContext)
     {
         if(serverSocket == null)
@@ -47,7 +46,7 @@ public class SocketThread extends Thread {
                 // 此行代码会阻塞，将一直等待别人的连接
                 Socket socket = serverSocket.accept();
                 socketList.add(socket);
-                System.out.println("###连接成功");
+                System.out.println("###连接成功 " + socket);
                 if(socket != null)
                 {
                     // 每当客户端连接后启动一条ServerThread线程为该客户端服务
