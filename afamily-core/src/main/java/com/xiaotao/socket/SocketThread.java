@@ -28,7 +28,7 @@ public class SocketThread extends Thread {
         {
             try {
                 this.serverSocket = new ServerSocket(30000);
-                System.out.println("###创建成功");
+                System.out.println("###创建成功 The IP is # " + serverSocket.getInetAddress());
             } catch (IOException e) {
                 e.printStackTrace();
             }
