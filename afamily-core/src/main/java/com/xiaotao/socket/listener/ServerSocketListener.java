@@ -6,10 +6,13 @@ import com.xiaotao.socket.SocketThread;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by tao on 16-2-26.
  */
+//@WebListener
 public class ServerSocketListener implements ServletContextListener {
 
     private SocketThread socketThread = null;

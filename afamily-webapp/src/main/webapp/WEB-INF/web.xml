@@ -10,6 +10,7 @@
 
     <!--Sring环境加载监听器 负责监听加载spring上下文-->
     <listener>
+        <description>Sring环境加载监听器</description>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
 
@@ -29,19 +30,20 @@
         <param-name>SocketPort</param-name>
         <param-value>30000</param-value>
     </context-param>
+
     <listener>
         <description>Socket服务随web启动而启动</description>
         <listener-class>com.xiaotao.socket.listener.ServerSocketListener</listener-class>
     </listener>
 
-        <error-page>
-            <error-code>404</error-code>
-            <location>/WEB-INF/jsp/error/404.jsp</location>
-        </error-page>
-<!--        <error-page>
-            <error-code>500</error-code>
-            <location>/WEB-INF/jsp/error/500.jsp</location>
-        </error-page>-->
+    <error-page>
+        <error-code>404</error-code>
+        <location>/WEB-INF/jsp/error/404.jsp</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/WEB-INF/jsp/error/500.jsp</location>
+    </error-page>
 
     <session-config>
         <session-timeout>30</session-timeout>

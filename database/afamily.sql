@@ -22,19 +22,20 @@ DROP TABLE IF EXISTS `student_user`;
 
 CREATE TABLE `student_user` (
   `user_id` int(4) NOT NULL AUTO_INCREMENT COMMENT '用户ID',
-  `student_id` varchar(10) NOT NULL COMMENT '学号',
+  `login_id` varchar(20) NOT NULL COMMENT '账号',
   `password` varchar(50) NOT NULL COMMENT '密码',
   `user_name` varchar(50) NOT NULL COMMENT '姓名',
   `user_portrait` longblob NOT NULL COMMENT '头像',
-  `sex` int(2) NOT NULL COMMENT '性别（0男1女）',
+  `student_id` varchar(10) NOT NULL COMMENT '学号',
   `grade` varchar(10) NOT NULL COMMENT '年级',
   `classes` varchar(10) NOT NULL COMMENT '班级',
+  `sex` int(2) NOT NULL COMMENT '性别（0男1女）',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 /*Data for the table `student_user` */
 
-insert  into `student_user`(`user_id`,`student_id`,`password`,`user_name`,`user_portrait`,`sex`,`grade`,`classes`) values (1,'admin','21232f297a57a5a743894a0e4a801fc3','小涛哈哈哈','',0,'大一','120402');
+insert  into `student_user`(`user_id`,`login_id`,`password`,`user_name`,`user_portrait`,`student_id`,`grade`,`classes`,`sex`) values (1,'admin','21232f297a57a5a743894a0e4a801fc3','小涛哈哈哈','','20124207','大四','120402',0);
 
 /*Table structure for table `sys_user` */
 

@@ -5,6 +5,8 @@ import com.xiaotao.socket.model.SocketInfo;
 
 import javax.servlet.ServletContext;
 import java.io.IOException;
+import java.net.InetAddress;
+import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class SocketThread extends Thread {
     public static ArrayList<Socket> socketList = new ArrayList<Socket>();
 
     private ServerSocket serverSocket = null;
-    private ServletContext servletContext = null;
+    private ServletContext mServletContext = null;
 
     public SocketThread(ServerSocket serverSocket,ServletContext servletContext)
     {
@@ -28,12 +30,12 @@ public class SocketThread extends Thread {
         {
             try {
                 this.serverSocket = new ServerSocket(30000);
-                System.out.println("###创建成功 The IP is # " + serverSocket.getInetAddress());
+                System.out.println("#创建成功 The Host Address is # " + InetAddress.getLocalHost().getHostAddress());
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        this.servletContext = servletContext;
+        this.mServletContext = servletContext;
     }
 
 

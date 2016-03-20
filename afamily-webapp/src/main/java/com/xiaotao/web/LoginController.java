@@ -21,20 +21,30 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
+    private Boolean isLogin(HttpSession session){
+        if (session.getAttribute("FLAG") == null){
+            return false;
+        }
+        return (Boolean)session.getAttribute("FLAG");
+    }
+
     @RequestMapping(value = "/", method = {RequestMethod.GET})
     public String index(HttpSession session) {
-        if (session.getAttribute("FLAG") == null){
-            session.setAttribute("FLAG",false);
+        if (isLogin(session)){
+            return "index";
+        }else {
+            return "redirect:/login";
         }
-        return "index";
-    //    return "redirect:/login";
     }
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
     public String login(HttpServletRequest request, HttpSession session) {
-        if (session.getAttribute("FLAG") == null){
-            session.setAttribute("FLAG",false);
-        }
+        return "login";
+    }
+
+    @RequestMapping(value = "/logout", method = {RequestMethod.GET})
+    public String logout(HttpSession session) {
+        session.invalidate();
         return "login";
     }
 

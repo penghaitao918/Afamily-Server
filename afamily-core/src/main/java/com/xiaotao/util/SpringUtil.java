@@ -41,7 +41,8 @@ public class SpringUtil implements ApplicationContextAware {
         if(SpringUtil.applicationContext == null){
             SpringUtil.applicationContext  = applicationContext;
             System.out.println("---------------------------------------------------------------------");
-            System.out.println("========ApplicationContext配置成功,applicationContext="+applicationContext+"========");
+            System.out.println("======================ApplicationContext配置成功======================");
+            System.out.println("===== " + applicationContext + " =====");
             System.out.println("---------------------------------------------------------------------");
 
         }
