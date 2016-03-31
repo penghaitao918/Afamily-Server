@@ -1,11 +1,9 @@
 package com.xiaotao.socket;
 
-import com.xiaotao.socket.model.SocketInfo;
 import com.xiaotao.util.JSONUtil;
 
 import java.io.OutputStream;
 import java.net.Socket;
-import java.net.SocketException;
 import java.util.Iterator;
 
 /**

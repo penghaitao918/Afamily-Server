@@ -1,6 +1,6 @@
 package com.xiaotao.util;
 
-import com.xiaotao.user.model.User;
+import com.xiaotao.student.model.Student;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,20 +30,19 @@ public class JSONUtil {
     }
 
     //  login
-    public static JSONObject login(User user){
+    public static JSONObject login(Student student){
         JSONObject loginJSON = new JSONObject();
         try {
             loginJSON.put(JSONType, login);
-            if (user != null) {
-                loginJSON.put(User.info.loginFlag,true);
-                loginJSON.put(User.info.account, user.getLoginId());
-                loginJSON.put(User.info.portrait, user.getPortrait());
-                loginJSON.put(User.info.userName, user.getUsername());
-                loginJSON.put(User.info.sex, user.getSex());
-                loginJSON.put(User.info.grade, user.getGrade());
-                loginJSON.put(User.info.classes, user.getClasses());
+            if (student != null) {
+                loginJSON.put(Student.info.loginFlag,true);
+                loginJSON.put(Student.info.account, student.getStudentId());
+                loginJSON.put(Student.info.portrait, student.getUserPortrait());
+                loginJSON.put(Student.info.userName, student.getUserName());
+                loginJSON.put(Student.info.sex, student.getSex());
+                loginJSON.put(Student.info.classes, student.getClasses());
             }else {
-                loginJSON.put(User.info.loginFlag, false);
+                loginJSON.put(Student.info.loginFlag, false);
             }
         }catch (JSONException e){
             e.printStackTrace();

@@ -1,7 +1,6 @@
 package com.xiaotao.socket.dao;
 
-import com.xiaotao.socket.model.SocketInfo;
-import com.xiaotao.user.model.User;
+import com.xiaotao.socket.model.SocketLog;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -30,6 +29,6 @@ import com.xiaotao.user.model.User;
  */
 public interface SocketDao {
 
-    SocketInfo loginCheck(SocketInfo socketInfo);
+    SocketLog loginCheck(SocketLog socketLog);
 
 }

@@ -57,8 +57,8 @@ function submit(){
         async:false,
         success:
             function (data) {
-    //            alert(JSON.stringify(data));
-              if(password == data.password){
+                //            alert(JSON.stringify(data));
+                if(password == data.password){
                     window.location.href = basePath;
                 }else{
                     createCode();

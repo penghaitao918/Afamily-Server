@@ -1,6 +1,7 @@
 package com.xiaotao.user.dao;
 
 import com.xiaotao.mybatis.MyBatisScan;
+import com.xiaotao.student.model.Student;
 import com.xiaotao.user.model.User;
 
 /**
@@ -10,7 +11,5 @@ import com.xiaotao.user.model.User;
 public interface UserDao {
 
     User adminLogin(User user);
-
-    User studentLogin(User user);
 
 }

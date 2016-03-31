@@ -6,8 +6,4 @@
         SELECT * FROM sys_user WHERE login_id=#{loginId}
     </select>
 
-    <select id="studentLogin" resultType="com.xiaotao.user.model.User">
-        SELECT * FROM student_user WHERE login_id=#{loginId}
-    </select>
-
 </mapper>

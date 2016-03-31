@@ -1,11 +1,8 @@
 package com.xiaotao.util;
 
 import com.xiaotao.socket.OperatorSocketData;
-import com.xiaotao.socket.SocketThread;
-import com.xiaotao.socket.model.SocketInfo;
+import com.xiaotao.socket.model.SocketLog;
 
-import java.io.OutputStream;
-import java.net.Socket;
 import java.util.Iterator;
 
 /**
@@ -39,13 +36,7 @@ public class ClientLoginUtil {
 
     public static void isOnLine(String account){
         try {
-            for (Iterator<SocketInfo> iterator = OperatorSocketData.socketInfoArrayList.iterator(); iterator.hasNext();){
-                SocketInfo socketInfo = iterator.next();
-                //  查找账号是否在线
-                if (socketInfo.getClientAccount().equals(account)){
 
-                }
-            }
         }catch (Exception e){
             e.printStackTrace();
         }

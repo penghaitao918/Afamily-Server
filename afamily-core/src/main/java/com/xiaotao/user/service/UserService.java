@@ -9,6 +9,4 @@ public interface UserService {
 
     User adminLogin(User user);
 
-    User studentLogin(User user);
-
 }

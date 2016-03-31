@@ -1,16 +1,12 @@
 package com.xiaotao.socket;
 
 
-import com.xiaotao.socket.model.SocketInfo;
-
 import javax.servlet.ServletContext;
 import java.io.IOException;
 import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.ArrayList;
-import java.util.Map;
 
 /**
  * Created by tao on 16-2-26.
