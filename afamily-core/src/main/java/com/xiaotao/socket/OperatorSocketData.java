@@ -1,5 +1,6 @@
 package com.xiaotao.socket;
 
+import com.xiaotao.socket.model.SocketLog;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.service.StudentService;
 import com.xiaotao.user.service.UserService;
@@ -87,13 +88,31 @@ public class OperatorSocketData implements Runnable{
                 Student client = new Student(jsonObject);
                 Student server = studentService.studentLogin(client);
                 if (server != null && client.getPassword().equals(server.getPassword())){
-                    serverSend = new ServerSend(JSONUtil.login(server));
-                //    SocketLog socketLog = new SocketLog(s,client.getLoginId());
+                    serverSend = new ServerSend(JSONUtil.login(server, 1));
+                    SocketLog socketLog = new SocketLog(s,client.getStudentId());
+                    //  TODO 写入数据库
+                    System.out.println(socketLog.getClientAccount());
+                    System.out.println(socketLog.getClientAddress());
+                    System.out.println(socketLog.getClientPort());
+                    System.out.println(socketLog.getLoginTime());
                 }else {
-                    serverSend = new ServerSend(JSONUtil.login(null));
+                    serverSend = new ServerSend(JSONUtil.login(null, 1));
                 }
                 break;
-            //  TODO:实现客户端与服务器的一对一交流，暂未实现客户端之间的交流
+            case JSONUtil.reLogin:
+                client = new Student(jsonObject);
+                server = studentService.studentLogin(client);
+                if (server != null && client.getPassword().equals(server.getPassword())){
+                    serverSend = new ServerSend(JSONUtil.login(server, 0));
+                    SocketLog socketLog = new SocketLog(s,client.getStudentId());
+                    System.out.println(socketLog.getClientAccount());
+                    System.out.println(socketLog.getClientAddress());
+                    System.out.println(socketLog.getClientPort());
+                    System.out.println(socketLog.getLoginTime());
+                }else {
+                    serverSend = new ServerSend(JSONUtil.login(null, 0));
+                }
+                break;
         }
         if(serverSend != null) {
             new Thread(serverSend).start();

@@ -15,7 +15,8 @@ public class JSONUtil {
     public static final int check = -1;
     public static final int notify = 0;
     public static final int login = 1;
-    public static final int logout = 2;
+    public static final int reLogin = 2;
+    public static final int logout = 3;
 
     //  心跳检测
     public static JSONObject connectCheck() {
@@ -29,11 +30,15 @@ public class JSONUtil {
         return checkJSON;
     }
 
-    //  login
-    public static JSONObject login(Student student){
+    //  login 0为重登陆， 1为初次登陆
+    public static JSONObject login(Student student, int type){
         JSONObject loginJSON = new JSONObject();
         try {
-            loginJSON.put(JSONType, login);
+            if (type == 0) {
+                loginJSON.put(JSONType, reLogin);
+            }else {
+                loginJSON.put(JSONType, login);
+            }
             if (student != null) {
                 loginJSON.put(Student.info.loginFlag,true);
                 loginJSON.put(Student.info.account, student.getStudentId());
