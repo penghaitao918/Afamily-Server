@@ -6,4 +6,9 @@
         SELECT * FROM student_user WHERE student_id=#{studentId}
     </select>
 
+
+<!--    <select id="inLogin" parameterType="com.xiaotao.student.model.Student" resultType="com.xiaotao.student.model.Student">
+        sel
+    </select>-->
+
 </mapper>

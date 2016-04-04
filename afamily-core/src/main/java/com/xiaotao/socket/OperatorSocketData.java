@@ -1,9 +1,9 @@
 package com.xiaotao.socket;
 
-import com.xiaotao.socket.model.SocketLog;
+import com.xiaotao.log.model.Log;
+import com.xiaotao.log.service.LogService;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.service.StudentService;
-import com.xiaotao.user.service.UserService;
 import com.xiaotao.util.JSONUtil;
 import com.xiaotao.util.SpringUtil;
 import org.json.JSONException;
@@ -71,6 +71,8 @@ public class OperatorSocketData implements Runnable{
     }
 
     @Autowired
+    private LogService logService = (LogService) SpringUtil.getBean("logService");
+    @Autowired
     private StudentService studentService = (StudentService) SpringUtil.getBean("studentService");
 
     //  定义处理用户请求的方法
@@ -82,19 +84,22 @@ public class OperatorSocketData implements Runnable{
         ServerSend serverSend = null;
         switch (type){
             case JSONUtil.logout:
+                logService.logout(s.getPort());
                 closeSocket();
                 break;
             case JSONUtil.login:
                 Student client = new Student(jsonObject);
                 Student server = studentService.studentLogin(client);
                 if (server != null && client.getPassword().equals(server.getPassword())){
+                    //  TODO 先判断是否在线 未实现
+/*                    if(在线){
+                        下线;
+                        重登录;
+                    }else{
+
+                    }*/
                     serverSend = new ServerSend(JSONUtil.login(server, 1));
-                    SocketLog socketLog = new SocketLog(s,client.getStudentId());
-                    //  TODO 写入数据库
-                    System.out.println(socketLog.getClientAccount());
-                    System.out.println(socketLog.getClientAddress());
-                    System.out.println(socketLog.getClientPort());
-                    System.out.println(socketLog.getLoginTime());
+                    logService.login(new Log(s,client.getStudentId()));
                 }else {
                     serverSend = new ServerSend(JSONUtil.login(null, 1));
                 }
@@ -104,11 +109,7 @@ public class OperatorSocketData implements Runnable{
                 server = studentService.studentLogin(client);
                 if (server != null && client.getPassword().equals(server.getPassword())){
                     serverSend = new ServerSend(JSONUtil.login(server, 0));
-                    SocketLog socketLog = new SocketLog(s,client.getStudentId());
-                    System.out.println(socketLog.getClientAccount());
-                    System.out.println(socketLog.getClientAddress());
-                    System.out.println(socketLog.getClientPort());
-                    System.out.println(socketLog.getLoginTime());
+                    logService.login(new Log(s,client.getStudentId()));
                 }else {
                     serverSend = new ServerSend(JSONUtil.login(null, 0));
                 }

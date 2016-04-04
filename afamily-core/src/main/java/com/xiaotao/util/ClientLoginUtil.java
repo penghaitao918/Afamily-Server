@@ -1,10 +1,5 @@
 package com.xiaotao.util;
 
-import com.xiaotao.socket.OperatorSocketData;
-import com.xiaotao.socket.model.SocketLog;
-
-import java.util.Iterator;
-
 /**
  * ━━━━━━神兽出没━━━━━━
  * 　　　┏┓　　　┏┓

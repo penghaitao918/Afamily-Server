@@ -1,6 +1,6 @@
-package com.xiaotao.socket.dao;
+package com.xiaotao.log.service;
 
-import com.xiaotao.socket.model.SocketLog;
+import com.xiaotao.log.model.Log;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -25,10 +25,15 @@ import com.xiaotao.socket.model.SocketLog;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author xiaoTao
- * @date 2016-02-28  下午10:49
+ * @date 2016-04-03  22:13
  */
-public interface SocketDao {
+public interface LogService {
 
-    SocketLog loginCheck(SocketLog socketLog);
+    void login(Log log);
 
+    void logout(int port);
+
+    Log display();
+
+    Log onLine();
 }

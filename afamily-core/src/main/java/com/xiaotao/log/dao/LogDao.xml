@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD iBatis Mapper 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaotao.log.dao.LogDao">
+
+<!--
+    <delete id="delBox" parameterType="int">
+        DELETE FROM sys_box WHERE id = #{id}
+    </delete>
+-->
+
+    <insert id="login" parameterType="com.xiaotao.log.model.Log" useGeneratedKeys="true" keyProperty="id">
+       INSERT INTO log(account, address, PORT) VALUES(#{account}, #{address}, #{port})
+    </insert>
+
+    <update id="logout" parameterType="int">
+        UPDATE LOG SET flag_login = 0 WHERE flag_login = 1 AND port = #{port}
+    </update>
+
+    <select id="display" resultType="com.xiaotao.log.model.Log">
+        SELECT id,account,address,port,login_time,logout_time,IF(flag_login = 1, "在线", "离线") AS 状态 FROM log
+    </select>
+
+    <select id="onLine" resultType="com.xiaotao.log.model.Log">
+        SELECT account,address,port FROM log WHERE flag_login = 1
+    </select>
+
+</mapper>

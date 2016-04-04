@@ -1,4 +1,10 @@
-package com.xiaotao.socket.service;
+package com.xiaotao.log.service.impl;
+
+import com.xiaotao.log.dao.LogDao;
+import com.xiaotao.log.model.Log;
+import com.xiaotao.log.service.LogService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -23,7 +29,31 @@ package com.xiaotao.socket.service;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author xiaoTao
- * @date 2016-03-02  上午12:38
+ * @date 2016-04-03  22:13
  */
-public interface SocketService {
+@Service("logService")
+public class LogServiceImpl implements LogService {
+
+    @Autowired
+    private LogDao logDao;
+
+    @Override
+    public void login(Log log) {
+        logDao.login(log);
+    }
+
+    @Override
+    public void logout(int port) {
+        logDao.logout(port);
+    }
+
+    @Override
+    public Log display() {
+        return logDao.display();
+    }
+
+    @Override
+    public Log onLine() {
+        return logDao.onLine();
+    }
 }

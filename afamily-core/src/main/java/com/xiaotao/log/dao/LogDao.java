@@ -1,6 +1,7 @@
-package com.xiaotao.socket.service.impl;
+package com.xiaotao.log.dao;
 
-import com.xiaotao.socket.service.SocketService;
+import com.xiaotao.log.model.Log;
+import com.xiaotao.mybatis.MyBatisScan;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -25,7 +26,17 @@ import com.xiaotao.socket.service.SocketService;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author xiaoTao
- * @date 2016-03-02  上午12:38
+ * @date 2016-04-03  22:05
  */
-public class SocketServiceImpl implements SocketService {
+@MyBatisScan
+public interface LogDao {
+
+    void login(Log log);
+
+    void logout(int port);
+
+    Log display();
+
+    Log onLine();
+
 }

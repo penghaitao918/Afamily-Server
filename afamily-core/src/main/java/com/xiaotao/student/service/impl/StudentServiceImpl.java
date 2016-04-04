@@ -14,7 +14,7 @@ import org.springframework.stereotype.Service;
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
-    public StudentDao studentDao;
+    private StudentDao studentDao;
 
     @Override
     public Student studentLogin(Student user) {
