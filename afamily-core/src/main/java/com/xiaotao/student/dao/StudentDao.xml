@@ -2,13 +2,42 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD iBatis Mapper 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.xiaotao.student.dao.StudentDao">
 
-    <select id="studentLogin" resultType="com.xiaotao.student.model.Student">
+    <!--
+        @functionName   登录
+        @description    检验是否存在此账号
+        @return         Student账号信息；null没有该账号
+        -->
+    <select id="login" resultType="com.xiaotao.student.model.Student">
         SELECT * FROM student_user WHERE student_id=#{studentId}
     </select>
 
+    <!--
+        @functionName   注册
+        @description    注册账号,通过存储过程，同时在student和online表中新建数据
+        @return        true 注册成功；false 注册失败
+    -->
+    <insert id="register" parameterType="com.xiaotao.student.model.Student">
+        INSERT INTO student_user(student_id,password,name,classes) VALUES(#{studentId},#{password},#{name},#{classes})
+        <selectKey resultType="int" keyProperty="userId">
+            select @@IDENTITY as id
+        </selectKey>
+    </insert>
 
-<!--    <select id="inLogin" parameterType="com.xiaotao.student.model.Student" resultType="com.xiaotao.student.model.Student">
-        sel
-    </select>-->
+    <!--
+        @functionName   上线
+        @description    用户上线写入，同时触发器写入log
+    -->
+    <update id="online_in" parameterType="com.xiaotao.student.model.OnLine">
+        update online set address=#{address},port=#{port},flag=1 where account=#{account}
+    </update>
+
+    <!--
+        @functionName   下线
+        @description    用户下线写入，同时触发器写入log
+    -->
+    <update id="online_out" parameterType="java.lang.Integer">
+        update online set flag=0 where port=#{port} and flag=1
+    </update>
+
 
 </mapper>

@@ -1,5 +1,8 @@
 package com.xiaotao.web;
 
+import com.xiaotao.BaseController;
+import com.xiaotao.student.model.Student;
+import com.xiaotao.student.service.StudentService;
 import com.xiaotao.user.model.User;
 import com.xiaotao.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,43 +13,20 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.UnsupportedEncodingException;
+import java.sql.SQLException;
 
 /**
  * Created by tao on 16-2-28.
  */
 
 @Controller
-public class LoginController {
+public class LoginController extends BaseController {
 
     @Autowired
     private UserService userService;
-
-    private Boolean isLogin(HttpSession session){
-        if (session.getAttribute("FLAG") == null){
-            return false;
-        }
-        return (Boolean)session.getAttribute("FLAG");
-    }
-
-    @RequestMapping(value = "/", method = {RequestMethod.GET})
-    public String index(HttpSession session) {
-        if (isLogin(session)){
-            return "index";
-        }else {
-            return "redirect:/login";
-        }
-    }
-
-    @RequestMapping(value = "/login", method = {RequestMethod.GET})
-    public String login(HttpServletRequest request, HttpSession session) {
-        return "login";
-    }
-
-    @RequestMapping(value = "/logout", method = {RequestMethod.GET})
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "login";
-    }
+    @Autowired
+    private StudentService studentService;
 
     @RequestMapping(value = "/admin/user/login", method = {RequestMethod.POST})
     @ResponseBody
@@ -58,4 +38,25 @@ public class LoginController {
         }
         return admin;
     }
+
+    @RequestMapping(value = "/register", method = {RequestMethod.POST})
+    public String register(HttpServletRequest request) {
+        Student student = new Student();
+        student.setStudentId(request.getParameter("account"));
+        student.setPassword(request.getParameter("password"));
+        try {
+            student.setUsername(new String(request.getParameter("name").getBytes("iso-8859-1"), "utf-8"));
+        } catch (UnsupportedEncodingException e) {
+            student.setUsername(request.getParameter("account"));
+            e.printStackTrace();
+        }
+        student.setClasses(request.getParameter("classes"));
+        studentService.register(student);
+        if (student.getUserId() != 0) {
+            return "register";
+        } else {
+            return "";
+        }
+    }
+
 }

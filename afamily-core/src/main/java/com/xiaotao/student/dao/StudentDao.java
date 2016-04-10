@@ -1,6 +1,7 @@
 package com.xiaotao.student.dao;
 
 import com.xiaotao.mybatis.MyBatisScan;
+import com.xiaotao.student.model.OnLine;
 import com.xiaotao.student.model.Student;
 
 /**
@@ -9,6 +10,12 @@ import com.xiaotao.student.model.Student;
 @MyBatisScan
 public interface StudentDao {
 
-    Student studentLogin(Student user);
+    Student login(Student user);
+
+    int register(Student user);
+
+    void online_in(OnLine onLine);
+
+    void online_out(int port);
 
 }

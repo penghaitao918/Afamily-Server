@@ -84,32 +84,24 @@ public class OperatorSocketData implements Runnable{
         ServerSend serverSend = null;
         switch (type){
             case JSONUtil.logout:
-                logService.logout(s.getPort());
+                studentService.logout(s.getPort());
                 closeSocket();
                 break;
             case JSONUtil.login:
                 Student client = new Student(jsonObject);
-                Student server = studentService.studentLogin(client);
-                if (server != null && client.getPassword().equals(server.getPassword())){
+                Student server = studentService.login(client, s);
+                if (server != null){
                     //  TODO 先判断是否在线 未实现
-/*                    if(在线){
-                        下线;
-                        重登录;
-                    }else{
-
-                    }*/
                     serverSend = new ServerSend(JSONUtil.login(server, 1));
-                    logService.login(new Log(s,client.getStudentId()));
                 }else {
                     serverSend = new ServerSend(JSONUtil.login(null, 1));
                 }
                 break;
             case JSONUtil.reLogin:
                 client = new Student(jsonObject);
-                server = studentService.studentLogin(client);
-                if (server != null && client.getPassword().equals(server.getPassword())){
+                server = studentService.login(client, s);
+                if (server != null){
                     serverSend = new ServerSend(JSONUtil.login(server, 0));
-                    logService.login(new Log(s,client.getStudentId()));
                 }else {
                     serverSend = new ServerSend(JSONUtil.login(null, 0));
                 }

@@ -42,8 +42,8 @@ public class JSONUtil {
             if (student != null) {
                 loginJSON.put(Student.info.loginFlag,true);
                 loginJSON.put(Student.info.account, student.getStudentId());
-                loginJSON.put(Student.info.portrait, student.getUserPortrait());
-                loginJSON.put(Student.info.userName, student.getUserName());
+                loginJSON.put(Student.info.portrait, student.getPortrait());
+                loginJSON.put(Student.info.name, student.getName());
                 loginJSON.put(Student.info.sex, student.getSex());
                 loginJSON.put(Student.info.classes, student.getClasses());
             }else {

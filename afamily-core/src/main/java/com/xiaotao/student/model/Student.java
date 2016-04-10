@@ -14,16 +14,16 @@ public class Student {
         public static final String account = "USER_ACCOUNT";
         public static final String password = "USER_PASSWORD";
         public static final String portrait = "USER_PORTRAIT";
-        public static final String userName = "USER_NAME";
+        public static final String name = "USER_NAME";
         public static final String sex = "USER_SEX";
         public static final String classes = "USER_CLASSES";
     }
 
-    private int userId;
+    private int userId = 0;
     private String studentId = null;
     private String password = null;
-    private String userPortrait = null;
-    private String userName = null;
+    private String portrait = null;
+    private String name = null;
     private String sex = null;
     private String classes = null;
 
@@ -47,11 +47,11 @@ public class Student {
     }
 
     public void setUsername(String username) {
-        this.userName = username;
+        this.name = username;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getName() {
+        return name;
     }
 
     public void setStudentId(String studentId) {
@@ -70,12 +70,12 @@ public class Student {
         return password;
     }
 
-    public void setUserPortrait(String userPortrait) {
-        this.userPortrait = userPortrait;
+    public void setPortrait(String portrait) {
+        this.portrait = portrait;
     }
 
-    public String getUserPortrait() {
-        return userPortrait;
+    public String getPortrait() {
+        return portrait;
     }
 
     public void setSex(String sex) {
