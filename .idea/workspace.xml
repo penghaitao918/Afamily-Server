@@ -2,47 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c01dcdf2-25a4-4367-aa5c-87b8b6e18a6f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/fontawesome-webfont.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/fontawesome-webfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/fontawesome-webfont.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/ionicons.eot" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/ionicons.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/ionicons.woff" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Task.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/task/TaskInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/register/agreement.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/animate.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/bootstrap.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/plugins/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/common.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/font-awesome.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/fontawesome-webfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/foot.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/head.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/ionicons.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/fonts/ionicons.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/plugins/jquery-1.11.1.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/plugins/jquery.popupoverlay.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/plugins/jquery.slimscroll.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/plugins/modernizr.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/morris.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/owl.carousel.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/owl.theme.default.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/simplify.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/simplify/simplify.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/css/simplify.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/HomeController.java" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/dao/LogDao.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/dao/LogDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/dao/LogDao.xml" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/dao/LogDao.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/service/LogService.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/service/LogService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/service/impl/LogServiceImpl.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/log/service/impl/LogServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/afamily.sql" afterPath="$PROJECT_DIR$/database/afamily.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="F:\ACMerHome\Server\afamily-webapp\src\main\webapp\WEB-INF\jsp\register.jsp" afterPath="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/register/register.jsp" />
     </list>
     <ignored path="wind.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -330,31 +293,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/HomeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="537" max-vertical-offset="1159">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="1311">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="66" />
+            <state vertical-scroll-proportion="0.5766017" vertical-offset="401" max-vertical-offset="1634">
+              <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="menu.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="menu.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.10584958" vertical-offset="95" max-vertical-offset="1425">
-              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="login.jsp" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/login.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="1349">
-              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="66" />
+            <state vertical-scroll-proportion="-0.6785714" vertical-offset="133" max-vertical-offset="1482">
+              <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -420,10 +383,10 @@
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/task/TaskInfo.java" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/common.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" />
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/head.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/foot.jsp" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp" />
+        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp" />
       </list>
     </option>
   </component>
@@ -633,16 +596,26 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="afamily-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Server" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
+              <option name="myItemId" value="afamily-webapp" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="register" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -668,19 +641,11 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="include" />
+              <option name="myItemId" value="xiaotao" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -706,67 +671,15 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
+              <option name="myItemId" value="java" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemId" value="xiaotao" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="jsp" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="error" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afamily-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afamily-webapp" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afamily-parent" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Server" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="afamily-webapp" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
+              <option name="myItemId" value="web" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1296,7 +1209,7 @@
       <workItem from="1460085041730" duration="11060000" />
       <workItem from="1460185254067" duration="33074000" />
       <workItem from="1460524299915" duration="1879000" />
-      <workItem from="1460548406684" duration="5354000" />
+      <workItem from="1460548406684" duration="7265000" />
     </task>
     <task id="LOCAL-00001" summary="# 2016/2/28">
       <created>1456593504211</created>
@@ -1342,11 +1255,15 @@
       <created>1460289780543</created>
       <updated>1460289780543</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="# 2016/4/13&#10;# 界面框架搭建&#10;">
+      <created>1460553878357</created>
+      <updated>1460553878357</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="261056000" />
+    <option name="totallyTimeSpent" value="262967000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
@@ -1441,7 +1358,8 @@
     <MESSAGE value="# 2016/4/3&#10;# 实现了登录和免登陆机制&#10;" />
     <MESSAGE value="# 2016/4/4&#10;# 实现了日志写入&#10;" />
     <MESSAGE value="# 2016/4/10&#10;# 完成了登陆注册日志写入&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 2016/4/10&#10;# 完成了登陆注册日志写入&#10;" />
+    <MESSAGE value="# 2016/4/13&#10;# 界面框架搭建&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 2016/4/13&#10;# 界面框架搭建&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1576,16 +1494,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/BaseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14454976" vertical-offset="224" max-vertical-offset="646">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="673" max-vertical-offset="1482">
@@ -1700,17 +1608,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3351955" vertical-offset="668" max-vertical-offset="1026">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/register/agreement.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="247" max-vertical-offset="418">
           <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1725,6 +1627,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.547812" vertical-offset="42" max-vertical-offset="1387">
           <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1776,14 +1679,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67659575" vertical-offset="537" max-vertical-offset="1159">
-          <caret line="53" column="68" selection-start-line="53" selection-start-column="68" selection-end-line="53" selection-end-column="68" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="627">
@@ -1816,14 +1711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="1311">
-          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/foot.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37047353" vertical-offset="0" max-vertical-offset="361">
@@ -1840,10 +1727,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/BaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14470284" vertical-offset="191" max-vertical-offset="608">
+          <caret line="21" column="29" selection-start-line="21" selection-start-column="29" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.12919897" vertical-offset="240" max-vertical-offset="1026">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/HomeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="537" max-vertical-offset="1159">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10584958" vertical-offset="95" max-vertical-offset="1425">
-          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
+        <state vertical-scroll-proportion="-0.6785714" vertical-offset="133" max-vertical-offset="1482">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5766017" vertical-offset="401" max-vertical-offset="1634">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
           <folding />
         </state>
       </provider>

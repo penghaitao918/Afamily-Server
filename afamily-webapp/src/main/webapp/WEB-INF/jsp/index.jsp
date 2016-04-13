@@ -21,14 +21,18 @@
         <div class="padding-md">
 
             <div class="sidebar-fix-bottom clearfix">
-                <div class="user-dropdown dropup pull-left">
+                <div class="pull-left font-16" >
                     <i class="fa fa-home"></i>
-                    <a href="#"> 首页 </a>
+                    <a href="#">&nbsp; 首页 &nbsp;</a>
                     <i class="fa fa-angle-right"></i>
                 </div>
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
 
+            <P>此界面为主界面，刷新二维码用来签到
+                <div>
+            <span class="pull-left font-18" id="refreshCode">#</span>
+                </div>
 
         </div>
     </div>
@@ -40,12 +44,12 @@
 <script>
     $(function () {
         window.setInterval(setNowTime, 1000);
+        window.setInterval(setCode(8), 5000);
     });
     function setNowTime() {
         var nowDate = format(new Date(), "yyyy-MM-dd    hh:mm:ss");
         $("#nowTime").html(nowDate)
     }
-
     function format(date, fmt) {
              var o = {
             "M+": date.getMonth() + 1,                 //月份
@@ -61,4 +65,17 @@
                 fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         return fmt;
     }
+
+    var chars = ['0','1','2','3','4','5','6','7','8','9',
+        'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+        'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    function setCode(n) {
+        var res = "";
+        for(var i = 0; i < n ; i ++) {
+            var id = Math.ceil(Math.random() * 63);
+            res += chars[id];
+        }
+        return res;
+    }
+
 </script>
