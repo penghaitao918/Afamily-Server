@@ -53,7 +53,7 @@ public class LoginController extends BaseController {
         student.setClasses(request.getParameter("classes"));
         studentService.register(student);
         if (student.getUserId() != 0) {
-            return "register";
+            return "register/register";
         } else {
             return "";
         }

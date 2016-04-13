@@ -1,7 +1,4 @@
-package com.xiaotao.log.dao;
-
-import com.xiaotao.log.model.Log;
-import com.xiaotao.mybatis.MyBatisScan;
+package com.xiaotao.student.model;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -26,11 +23,7 @@ import com.xiaotao.mybatis.MyBatisScan;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author xiaoTao
- * @date 2016-04-03  22:05
+ * @date 2016-04-13  14:31
  */
-@MyBatisScan
-public interface LogDao {
-
-    Log display();
-
+public class Task {
 }

@@ -38,22 +38,7 @@ public class LogServiceImpl implements LogService {
     private LogDao logDao;
 
     @Override
-    public void login(Log log) {
-        logDao.login(log);
-    }
-
-    @Override
-    public void logout(int port) {
-        logDao.logout(port);
-    }
-
-    @Override
     public Log display() {
         return logDao.display();
-    }
-
-    @Override
-    public Log onLine() {
-        return logDao.onLine();
     }
 }

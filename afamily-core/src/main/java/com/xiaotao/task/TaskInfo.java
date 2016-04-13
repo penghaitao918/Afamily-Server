@@ -1,7 +1,4 @@
-package com.xiaotao.log.dao;
-
-import com.xiaotao.log.model.Log;
-import com.xiaotao.mybatis.MyBatisScan;
+package com.xiaotao.task;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -26,11 +23,33 @@ import com.xiaotao.mybatis.MyBatisScan;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author xiaoTao
- * @date 2016-04-03  22:05
+ * @date 2016-04-13  14:33
  */
-@MyBatisScan
-public interface LogDao {
+public class TaskInfo {
 
-    Log display();
+    private int taskId = -1;
+    private String taskName = null;
 
+    public TaskInfo() {}
+    //  WEB 端发布任务
+    public TaskInfo(int id, String name) {
+        this.taskId = id;
+        this.taskName = name;
+    }
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
+    }
+
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public void setTaskName(String taskName) {
+        this.taskName = taskName;
+    }
 }

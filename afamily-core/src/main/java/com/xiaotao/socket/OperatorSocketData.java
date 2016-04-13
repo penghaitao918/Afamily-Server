@@ -71,8 +71,6 @@ public class OperatorSocketData implements Runnable{
     }
 
     @Autowired
-    private LogService logService = (LogService) SpringUtil.getBean("logService");
-    @Autowired
     private StudentService studentService = (StudentService) SpringUtil.getBean("studentService");
 
     //  定义处理用户请求的方法

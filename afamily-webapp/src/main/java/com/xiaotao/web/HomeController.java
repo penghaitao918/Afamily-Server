@@ -57,4 +57,9 @@ public class HomeController extends BaseController {
         return "login";
     }
 
+    @RequestMapping(value = "/agreement", method = {RequestMethod.GET})
+    public String agreement() {
+        return "register/agreement";
+    }
+
 }

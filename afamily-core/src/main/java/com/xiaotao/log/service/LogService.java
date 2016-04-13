@@ -29,11 +29,5 @@ import com.xiaotao.log.model.Log;
  */
 public interface LogService {
 
-    void login(Log log);
-
-    void logout(int port);
-
     Log display();
-
-    Log onLine();
 }
