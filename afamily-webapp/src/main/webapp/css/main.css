@@ -5,11 +5,11 @@
 
 @font-face {
     font-family: 'SingleSleeveRegular';
-    src: url('../font/sing-webfont.eot');
-    src: url('../font/sing-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/sing-webfont.woff') format('woff'),
-         url('../font/sing-webfont.ttf') format('truetype'),
-         url('../font/sing-webfont.svg#SingleSleeveRegular') format('svg');
+    src: url('font/sing-webfont.eot');
+    src: url('font/sing-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/sing-webfont.woff') format('woff'),
+         url('font/sing-webfont.ttf') format('truetype'),
+         url('font/sing-webfont.svg#SingleSleeveRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -20,7 +20,7 @@
 html, body{
 	
 	height:100%;
-	background:#186aa9 url(../images/sky-background.png) top repeat-x;	
+	background:#186aa9 url(../images/sky-background.png) top repeat-x;
 	overflow:hidden;
 	padding:0;
 	margin:0;
@@ -134,7 +134,7 @@ div.search{
 
 div.search input[type=submit]:hover{
 	
-	background:#ffffff url(../images/search.png) center center no-repeat;	
+	background:#ffffff url(../images/search.png) center center no-repeat;
 	cursor:pointer;
 	
 }
@@ -205,12 +205,13 @@ div.dog-bubble{
 	z-index:999;
 	opacity:0;
 	color:#555555;
-	font-size:15px;
-    font-weight: bold;
+	font-size:14px;
 	text-shadow:1px 1px 0 #ffffff;
+	
 }
 
 div.dog-bubble>p{
+	
 	text-align:center;
 	padding:0px 35px;	
 	

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: tao
-  Date: 16-2-28
-  Time: 上午1:22
+  Date: 2016/4/14
+  Time: 10:58
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -10,12 +10,12 @@
 <html>
 <head>
     <title>首页</title>
-    <%@include file="include/common.jsp" %>
+    <%@include file="../include/common.jsp" %>
 </head>
 <body class="overflow-hidden">
 <div class="wrapper preload">
-    <%@include file="include/head.jsp"%>
-    <%@include file="include/menu.jsp"%>
+    <%@include file="../include/head.jsp"%>
+    <%@include file="../include/menu.jsp"%>
 
     <div class="main-container">
         <div class="padding-md">
@@ -30,9 +30,9 @@
             </div>
 
 
-<div>
-    <P>此界面为主界面，刷新二维码用来签到
-</div>
+            <div>
+                <P>此界面为主界面，刷新二维码用来签到
+            </div>
             <div>
                 <label id="countdown">离下一次刷新还有</label>
             </div>
@@ -65,7 +65,7 @@
         $("#countdown").html(nowCountdown);
     }
     function format(date, fmt) {
-             var o = {
+        var o = {
             "M+": date.getMonth() + 1,                 //月份
             "d+": date.getDate(),                    //日
             "h+": date.getHours(),                   //小时

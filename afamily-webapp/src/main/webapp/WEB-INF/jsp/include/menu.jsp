@@ -5,7 +5,7 @@
   Time: 18:44
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + request.getContextPath() + "/";
 %>
@@ -25,7 +25,7 @@
                 </li>
                 <%--发布通知--%>
                 <li class="bg-palette2">
-                    <a href="#">
+                    <a href="<%=basePath%>publish/notification">
                         <span class="menu-content block">
                             <span class="menu-icon"><i class="block fa fa-bell fa-lg"></i></span>
                             <span class="text m-left-sm">发布通知</span>

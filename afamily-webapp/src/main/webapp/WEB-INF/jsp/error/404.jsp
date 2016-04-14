@@ -5,23 +5,62 @@
   Time: 上午1:22
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html; charset=UTF-8" language="java" %>
-<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
 <head>
-    <link rel="stylesheet" href="css/main.css" type="text/css" media="screen, projection" /> <!-- main stylesheet -->
-    <link rel="stylesheet" type="text/css" media="all" href="css/tipsy.css" /> <!-- Tipsy implementation -->
+
+    <link rel="stylesheet" type="text/css" media="screen, projection" href="<c:url value="/css/main.css"/>">
+    <link rel="stylesheet" type="text/css" media="all" href="<c:url value="/css/tipsy.css"/>">
     <!--[if lt IE 9]>
-    <link rel="stylesheet" type="text/css" href="css/ie8.css" />
+    <link rel="stylesheet" type="text/css" href="href="<c:url value="/css/ie8.css"/>"/>
     <![endif]-->
-    <title>404 - File Not found</title>
-</head>
+
+    <script src="<c:url value="/js/plugins/jquery-1.7.2.min.js"/>" type="text/javascript"></script>
+    <script src="<c:url value="/js/error404.js"/>" type="text/javascript"></script>
+    <script src="<c:url value="/js/jquery.tipsy.js"/>" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+            universalPreloader();
+
+        });
+
+        $(window).load(function(){
+
+            //remove Universal Preloader
+            universalPreloaderRemove();
+
+            rotate();
+            dogRun();
+            dogTalk();
+
+            //Tipsy implementation
+            $('.with-tooltip').tipsy({gravity: $.fn.tipsy.autoNS});
+
+        });
+
+    </script>
+
+
+    <title>404 - Not found</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+
 <body>
+
 <div id="wrapper">
+    <!-- 404 graphic -->
     <div class="graphic"></div>
+    <!-- 404 graphic -->
+
+    <!-- Not found text -->
     <div class="not-found-text">
         <h1 class="not-found-text">页面未找到!</h1>
     </div>
+    <!-- Not found text -->
+
     <div class="dog-wrapper">
         <div class="dog"></div>
         <div class="dog-bubble"></div>
@@ -52,24 +91,10 @@
             </p>
         </div>
     </div>
+
+    <!-- planet at the bottom -->
     <div class="planet"></div>
+    <!-- planet at the bottom -->
 </div>
-
-<script type="text/javascript" src="js/plugins/jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="js/error404.js"></script>
-<script type="text/javascript" src="js/jquery.tipsy.js"></script>
-<script type="text/javascript">
-    $(document).ready(function(){
-        universalPreloader();
-    });
-    $(window).load(function(){
-        universalPreloaderRemove();
-        rotate();
-        dogRun();
-        dogTalk();
-        $('.with-tooltip').tipsy({gravity: $.fn.tipsy.autoNS});
-    });
-</script>
-
 </body>
 </html>
