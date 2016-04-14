@@ -65,8 +65,8 @@
                 </li>
             </ul>
         </div>
-
     </div><!-- sidebar-inner -->
 
     <%@ include file="foot.jsp" %>
+
 </aside>

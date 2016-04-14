@@ -28,11 +28,19 @@
                 </div>
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
+<div>
+    <P>此界面为主界面，刷新二维码用来签到
+</div>
+            <div>
+                <label id="countdown">离下一次刷新还有</label>
+            </div>
+            <div>
+                <P>
+            </div>
+            <div>
+                <span class="pull-left font-18" id="refreshCode"></span>
+            </div>
 
-            <P>此界面为主界面，刷新二维码用来签到
-                <div>
-            <span class="pull-left font-18" id="refreshCode">#</span>
-                </div>
 
         </div>
     </div>
@@ -42,13 +50,17 @@
 </html>
 
 <script>
+    //  初始化倒计时时长
+    var countdownTime = 10;
     $(function () {
         window.setInterval(setNowTime, 1000);
-        window.setInterval(setCode(8), 5000);
+        window.setInterval(setCode, countdownTime * 1000);
     });
     function setNowTime() {
         var nowDate = format(new Date(), "yyyy-MM-dd    hh:mm:ss");
-        $("#nowTime").html(nowDate)
+        $("#nowTime").html(nowDate);
+        var nowCountdown = "离下一次刷新还有 " + setCountdown() + " s";
+        $("#countdown").html(nowCountdown);
     }
     function format(date, fmt) {
              var o = {
@@ -69,13 +81,22 @@
     var chars = ['0','1','2','3','4','5','6','7','8','9',
         'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
         'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
-    function setCode(n) {
+    function setCode() {
         var res = "";
-        for(var i = 0; i < n ; i ++) {
-            var id = Math.ceil(Math.random() * 63);
+        for(var i = 0; i < 6 ; i ++) {
+            var id = parseInt(62 * Math.random());
             res += chars[id];
         }
-        return res;
+        $("#refreshCode").html(res)
+    }
+
+    //  初始化当前计时
+    var nowCountdown = countdownTime - 1;
+    function setCountdown() {
+        if (nowCountdown == 0) {
+            nowCountdown = countdownTime;
+        }
+        return nowCountdown--;
     }
 
 </script>

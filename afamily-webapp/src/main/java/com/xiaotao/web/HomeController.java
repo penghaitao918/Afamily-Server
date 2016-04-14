@@ -37,13 +37,9 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class HomeController extends BaseController {
 
-    @RequestMapping(value = "/", method = {RequestMethod.GET})
-    public String index(HttpSession session) {
-        if (isLogin(session)){
-            return "index";
-        }else {
-            return "redirect:/login";
-        }
+    @RequestMapping(value = "/agreement", method = {RequestMethod.GET})
+    public String agreement() {
+        return "register/agreement";
     }
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
@@ -57,9 +53,15 @@ public class HomeController extends BaseController {
         return "login";
     }
 
-    @RequestMapping(value = "/agreement", method = {RequestMethod.GET})
-    public String agreement() {
-        return "register/agreement";
+    @RequestMapping(value = "/", method = {RequestMethod.GET})
+    public String index(HttpSession session) {
+        if (isLogin(session)){
+            return "index";
+        }else {
+            return "redirect:/login";
+        }
     }
+
+
 
 }
