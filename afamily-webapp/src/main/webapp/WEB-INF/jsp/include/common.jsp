@@ -32,3 +32,6 @@
 <script src="<c:url value="/js/plugins/modernizr.min.js"/>" type="text/javascript"></script>
 <!-- Simplify -->
 <script src="<c:url value="/js/simplify/simplify.js"/>" type="text/javascript"></script>
+<%--Common--%>
+<script src="<c:url value="/js/common.js"/>" type="text/javascript"></script>
+

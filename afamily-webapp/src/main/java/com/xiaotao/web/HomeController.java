@@ -39,8 +39,8 @@ public class HomeController extends BaseController {
 
     @RequestMapping(value = "/agreement", method = {RequestMethod.GET})
     public String agreement() {
-   //     return "register/agreement";
-        return "test";
+        return "register/agreement";
+  //      return "test";
     }
 
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
@@ -64,9 +64,36 @@ public class HomeController extends BaseController {
     }
 
     @RequestMapping(value = "/publish/notification", method = {RequestMethod.GET})
-    public String publishNotify(HttpSession session) {
+    public String setNotify(HttpSession session) {
         if (isLogin(session)){
             return "notification/publish";
+        }else {
+            return "redirect:/login";
+        }
+    }
+
+    @RequestMapping(value = "/publish/task", method = {RequestMethod.GET})
+    public String setTask(HttpSession session) {
+        if (isLogin(session)){
+            return "task/publish";
+        }else {
+            return "redirect:/login";
+        }
+    }
+
+    @RequestMapping(value = "/info/task", method = {RequestMethod.GET})
+    public String getTask(HttpSession session) {
+        if (isLogin(session)){
+            return "task/info";
+        }else {
+            return "redirect:/login";
+        }
+    }
+
+    @RequestMapping(value = "/info/options", method = {RequestMethod.GET})
+    public String getOption(HttpSession session) {
+        if (isLogin(session)){
+            return "options/info";
         }else {
             return "redirect:/login";
         }

@@ -35,7 +35,7 @@
                 </li>
                 <%--发布任务--%>
                 <li class="bg-palette3">
-                    <a href="#">
+                    <a href="<%=basePath%>publish/task">
                         <span class="menu-content block">
                             <span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
                             <span class="text m-left-sm">发布任务</span>
@@ -45,7 +45,7 @@
                 </li>
                 <%--任务一览--%>
                 <li class="bg-palette4">
-                    <a href="#">
+                    <a href="<%=basePath%>info/task">
                         <span class="menu-content block">
                             <span class="menu-icon"><i class="block fa fa-desktop fa-lg"></i></span>
                             <span class="text m-left-sm">任务一览</span>
@@ -55,7 +55,7 @@
                 </li>
                 <%--意见反馈--%>
                 <li class="bg-palette4">
-                    <a href="#">
+                    <a href="<%=basePath%>info/options">
                         <span class="menu-content block">
                             <span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
                             <span class="text m-left-sm">意见收集</span>

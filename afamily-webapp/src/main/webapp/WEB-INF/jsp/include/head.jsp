@@ -6,6 +6,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
 <header class="top-nav">
     <div class="top-nav-inner">
 
@@ -36,10 +37,14 @@
             <div class="pull-right m-right-sm">
                 <ul class="nav-notification">
                     <li>
-                        <a href="#" data-toggle="dropdown"><i class="fa fa fa-home fa-lg"></i> 首页</a>
+                        <a href="#" onclick="toHome()">
+                            <i class="fa fa fa-home fa-lg"></i> 首页
+                        </a>
                     </li>
                     <li>
-                        <a href="#" data-toggle="dropdown"><i class="fa fa ion-log-out fa-lg"></i> 退出</a>
+                        <a href="#" onclick="logout()">
+                            <i class="fa fa ion-log-out fa-lg"></i> 退出
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -49,3 +54,13 @@
     </div>
 
 </header>
+
+<script>
+    function logout() {
+        window.location.href = basePath + "logout";
+    }
+    function toHome() {
+        window.location.href = basePath;
+    }
+</script>
+

@@ -23,7 +23,7 @@
             <div class="sidebar-fix-bottom clearfix">
                 <div class="pull-left font-16" >
                     <i class="fa fa-home fa-lg"></i>
-                    <a href="#">&nbsp; 首页 &nbsp;</a>
+                    <a href="#">&nbsp; 首页</a>
                     <i class="fa fa-angle-right"></i>
                 </div>
                 <span class="pull-right font-18" id="nowTime"></span>
@@ -34,7 +34,7 @@
     <P>此界面为主界面，刷新二维码用来签到
 </div>
             <div>
-                <label id="countdown">离下一次刷新还有</label>
+                <label id="countdown">离下一次刷新还有10s</label>
             </div>
             <div>
                 <P>
@@ -55,6 +55,7 @@
     //  初始化倒计时时长
     var countdownTime = 10;
     $(function () {
+        setCode();
         window.setInterval(setNowTime, 1000);
         window.setInterval(setCode, countdownTime * 1000);
     });

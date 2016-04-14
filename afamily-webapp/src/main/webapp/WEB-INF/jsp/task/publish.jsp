@@ -9,7 +9,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>发布通知</title>
+    <title>发布任务</title>
     <%@include file="../include/common.jsp" %>
 </head>
 <body class="overflow-hidden">
@@ -22,15 +22,15 @@
 
             <div class="sidebar-fix-bottom clearfix">
                 <div class="pull-left font-16" >
-                    <i class="fa fa-bell fa-lg"></i>
-                    <a href="#">&nbsp;发布通知</a>
+                    <i class="fa fa-tags fa-lg"></i>
+                    <a href="#">&nbsp;发布任务</a>
                     <i class="fa fa-angle-right"></i>
                 </div>
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
 
             <div>
-                <P>此界面发布通知
+                <P>此界面发布任务
             </div>
 
 
