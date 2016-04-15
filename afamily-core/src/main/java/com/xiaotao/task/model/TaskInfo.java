@@ -1,4 +1,4 @@
-package com.xiaotao.task;
+package com.xiaotao.task.model;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -31,6 +31,7 @@ public class TaskInfo {
     private String taskName = null;
 
     public TaskInfo() {}
+
     //  WEB 端发布任务
     public TaskInfo(int id, String name) {
         this.taskId = id;

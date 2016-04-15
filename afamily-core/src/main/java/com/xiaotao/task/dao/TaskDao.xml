@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD iBatis Mapper 3.0 //EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.xiaotao.task.dao.TaskDao">
+
+    <!--
+        @description    获取任务
+        @return         taskName；taskId
+        -->
+    <select id="getAllTaskInfoList" resultType="com.xiaotao.task.model.TaskInfo">
+        SELECT * FROM task
+        <where>
+            <if test="task_name != '' or task_name != null">
+            </if>
+        </where>
+        ${sortField} ${sortOrder}
+    </select>
+
+    <!--
+        @description    发布任务
+    -->
+    <update id="publish" parameterType="com.xiaotao.task.model.TaskInfo">
+        update task set task_name=#{taskName} where task_id=#{taskId}
+    </update>
+
+</mapper>

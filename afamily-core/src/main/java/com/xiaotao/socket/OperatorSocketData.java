@@ -4,6 +4,8 @@ import com.xiaotao.log.model.Log;
 import com.xiaotao.log.service.LogService;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.service.StudentService;
+import com.xiaotao.task.model.TaskInfo;
+import com.xiaotao.task.service.TaskInfoService;
 import com.xiaotao.util.JSONUtil;
 import com.xiaotao.util.SpringUtil;
 import org.json.JSONException;
@@ -16,6 +18,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
 import java.util.Iterator;
+import java.util.List;
 
 /**
  * Created by tao on 16-2-26.
@@ -72,6 +75,8 @@ public class OperatorSocketData implements Runnable{
 
     @Autowired
     private StudentService studentService = (StudentService) SpringUtil.getBean("studentService");
+    @Autowired
+    private TaskInfoService taskInfoService = (TaskInfoService) SpringUtil.getBean("taskInfoService");
 
     //  定义处理用户请求的方法
     private void dealWithUserRequest(int type, JSONObject jsonObject) throws JSONException {
@@ -86,28 +91,34 @@ public class OperatorSocketData implements Runnable{
                 closeSocket();
                 break;
             case JSONUtil.login:
-                Student client = new Student(jsonObject);
-                Student server = studentService.login(client, s);
-                if (server != null){
-                    //  TODO 先判断是否在线 未实现
-                    serverSend = new ServerSend(JSONUtil.login(server, 1));
-                }else {
-                    serverSend = new ServerSend(JSONUtil.login(null, 1));
-                }
+                login(jsonObject, 1);
                 break;
             case JSONUtil.reLogin:
-                client = new Student(jsonObject);
-                server = studentService.login(client, s);
-                if (server != null){
-                    serverSend = new ServerSend(JSONUtil.login(server, 0));
-                }else {
-                    serverSend = new ServerSend(JSONUtil.login(null, 0));
-                }
+                login(jsonObject,0);
+                break;
+            case JSONUtil.taskList:
+                getAllTaskInfoList();
                 break;
         }
-        if(serverSend != null) {
-            new Thread(serverSend).start();
+    }
+
+    private void login(JSONObject jsonObject, int type) {
+        ServerSend send = null;
+        Student client = new Student(jsonObject);
+        Student server = studentService.login(client, s);
+        if (server != null){
+            //  TODO 先判断是否在线 未实现
+            send = new ServerSend(JSONUtil.login(server, type));
+        }else {
+            send = new ServerSend(JSONUtil.login(null, type));
         }
+        new Thread(send).start();
+    }
+
+    private void getAllTaskInfoList() {
+        List<TaskInfo> list = taskInfoService.getAllTaskInfoList();
+        ServerSend send = new ServerSend(JSONUtil.getAllTaskInfoList(list));
+        new Thread(send).start();
     }
 
     private void closeSocket(){

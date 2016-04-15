@@ -1,8 +1,11 @@
 package com.xiaotao.util;
 
 import com.xiaotao.student.model.Student;
+import com.xiaotao.task.model.TaskInfo;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.List;
 
 /**
  * 封装返回给客户端的JSON
@@ -17,6 +20,7 @@ public class JSONUtil {
     public static final int login = 1;
     public static final int reLogin = 2;
     public static final int logout = 3;
+    public static final int taskList = 4;
 
     //  心跳检测
     public static JSONObject connectCheck() {
@@ -60,6 +64,17 @@ public class JSONUtil {
         JSONObject logoutJSON = new JSONObject();
         try {
             logoutJSON.put(JSONType, logout);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return logoutJSON;
+    }
+
+    public static JSONObject getAllTaskInfoList(List<TaskInfo> list) {
+        JSONObject logoutJSON = new JSONObject();
+        try {
+            logoutJSON.put(JSONType, taskList);
+            //  TODO JSON 存放 List
         }catch (JSONException e){
             e.printStackTrace();
         }
