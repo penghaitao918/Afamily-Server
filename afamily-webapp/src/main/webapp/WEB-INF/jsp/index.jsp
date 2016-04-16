@@ -11,17 +11,49 @@
 <head>
     <title>首页</title>
     <%@include file="include/common.jsp" %>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .main-container{
+            height: 100%;
+            overflow: auto;
+        }
+
+        .padding-md {
+            height: 100%;
+        }
+
+        .container {
+            padding: 0;
+        }
+
+        .two-dimensional{
+            display: table;
+            height: 100%;
+            width: 100%;
+            text-align: center;
+        }
+
+        .two-dimensional > .thumbnail {
+            background: transparent;
+            border: none;
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
 </head>
 <body class="overflow-hidden">
 <div class="wrapper preload">
-    <%@include file="include/head.jsp"%>
-    <%@include file="include/menu.jsp"%>
+    <%@include file="include/head.jsp" %>
+    <%@include file="include/menu.jsp" %>
 
     <div class="main-container">
         <div class="padding-md">
 
             <div class="sidebar-fix-bottom clearfix">
-                <div class="pull-left font-16" >
+                <div class="pull-left font-16">
                     <i class="fa fa-home fa-lg"></i>
                     <a href="#">&nbsp; 首页</a>
                     <i class="fa fa-angle-right"></i>
@@ -29,21 +61,20 @@
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
 
+            <div class="container">
+                <div class="two-dimensional">
+                    <div class="thumbnail">
+                        <img alt="320x320" width="320px" height="320px">
+                        <div class="caption">
+                            <h3>扫描二维码</h3>
 
-<div>
-    <P>此界面为主界面，刷新二维码用来签到
-</div>
-            <div>
-                <label id="countdown">离下一次刷新还有10s</label>
-            </div>
-            <div>
-                <P>
-            </div>
-            <div>
-                <span class="pull-left font-18" id="refreshCode"></span>
-            </div>
+                            <p id="countdown">离下一次刷新还有10s</p>
 
-
+                            <p id="refreshCode"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -66,7 +97,7 @@
         $("#countdown").html(nowCountdown);
     }
     function format(date, fmt) {
-             var o = {
+        var o = {
             "M+": date.getMonth() + 1,                 //月份
             "d+": date.getDate(),                    //日
             "h+": date.getHours(),                   //小时
@@ -81,12 +112,12 @@
         return fmt;
     }
 
-    var chars = ['0','1','2','3','4','5','6','7','8','9',
-        'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
-        'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
     function setCode() {
         var res = "";
-        for(var i = 0; i < 6 ; i ++) {
+        for (var i = 0; i < 6; i++) {
             var id = parseInt(62 * Math.random());
             res += chars[id];
         }

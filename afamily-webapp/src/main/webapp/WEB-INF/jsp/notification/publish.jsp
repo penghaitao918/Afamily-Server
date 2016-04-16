@@ -29,11 +29,27 @@
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
 
-            <div>
-                <P>此界面发布通知
+            <div class="container-fluid">
+                <form class="form-horizontal" style="border: 1px solid gainsboro; margin: 25px auto; padding: 25px;">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">标题</label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" placeholder="请输入标题">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">内容</label>
+                        <div class="col-sm-8">
+                            <textarea class="form-control" rows="12" style="resize: vertical"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-2 col-sm-8">
+                            <button type="submit" class="btn btn-success">提交</button>
+                        </div>
+                    </div>
+                </form>
             </div>
-
-
 
         </div>
     </div>

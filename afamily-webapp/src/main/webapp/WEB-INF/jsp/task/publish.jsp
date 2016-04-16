@@ -14,14 +14,14 @@
 </head>
 <body class="overflow-hidden">
 <div class="wrapper preload">
-    <%@include file="../include/head.jsp"%>
-    <%@include file="../include/menu.jsp"%>
+    <%@include file="../include/head.jsp" %>
+    <%@include file="../include/menu.jsp" %>
 
     <div class="main-container">
         <div class="padding-md">
 
             <div class="sidebar-fix-bottom clearfix">
-                <div class="pull-left font-16" >
+                <div class="pull-left font-16">
                     <i class="fa fa-tags fa-lg"></i>
                     <a href="#">&nbsp;发布任务</a>
                     <i class="fa fa-angle-right"></i>
@@ -29,15 +29,72 @@
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
 
-            <div>
-                <P>此界面发布任务
+            <div class="container-fluid">
+                <form class="form-horizontal" id="task-list">
+                    <div class="form-group task-item">
+                        <label class="col-md-2 control-label text-right font-18">1.</label>
+
+                        <div class="col-md-8">
+                            <input type="text" class="form-control task-content" placeholder="任务">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="button" class="btn btn-danger delete-task">删除</button>
+                        </div>
+                    </div>
+                    <div class="form-group text-center task-form-action">
+                        <button type="button" class="btn btn-success margin-md" id="add-tack">添加</button>
+                        <button type="button" class="btn btn-warning margin-md" id="publish-task">发布</button>
+                    </div>
+                </form>
             </div>
-
-
-
         </div>
     </div>
 
 </div>
+<script type="text/javascript">
+
+    var Publish_Task_Module = function () {
+    };
+
+    Publish_Task_Module.prototype.createItem = function (data) {
+        var item = $('<div class="form-group task-item"></div>'),
+                num, content;
+        if (typeof data !== 'object') {
+            num = $('#task-list > .task-item').size() + 1;
+            content = '';
+        } else {
+            num = data.number;
+            content = data.content;
+        }
+        item.append('<label class="col-md-2 control-label text-right font-18">' + num + '.</label>');
+        item.append('<div class="col-md-8"><input type="text" class="form-control task-content" placeholder="任务" value="' + content + '"> </div> <div class="col-md-2"> <button class="btn btn-danger delete-task">删除</button> </div>');
+        return item;
+    };
+
+    Publish_Task_Module.prototype.init = function(){
+        var module = this;
+        //任务删除事件委托
+        $("#task-list").on('click',function (e){
+            var $target = $(e.target);
+            if ($target.hasClass('delete-task')){
+                $target.closest('.task-item').remove();
+            }
+        });
+
+        $("#add-tack").on('click',function (e){
+            e.stopPropagation();
+            $("#task-list > .task-form-action").before(module.createItem());
+        });
+
+        $("#publish-task").on('click',function (e){
+            e.stopPropagation();
+        });
+    };
+
+    $(function () {
+        var module = new Publish_Task_Module();
+        module.init();
+    });
+</script>
 </body>
 </html>
