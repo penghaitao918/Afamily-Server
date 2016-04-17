@@ -39,5 +39,9 @@
         update online set flag=0 where port=#{port} and flag=1
     </update>
 
+    <select id="getStudentTaskInfo" resultType="com.xiaotao.student.model.StudentTask" parameterType="java.lang.String">
+        select * from student_task where account = #{account}
+    </select>
+
 
 </mapper>

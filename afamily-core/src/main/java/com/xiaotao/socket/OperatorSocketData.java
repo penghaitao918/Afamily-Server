@@ -3,6 +3,7 @@ package com.xiaotao.socket;
 import com.xiaotao.log.model.Log;
 import com.xiaotao.log.service.LogService;
 import com.xiaotao.student.model.Student;
+import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
 import com.xiaotao.task.model.TaskInfo;
 import com.xiaotao.task.service.TaskInfoService;
@@ -99,6 +100,9 @@ public class OperatorSocketData implements Runnable{
             case JSONUtil.taskList:
                 getAllTaskInfoList();
                 break;
+            case JSONUtil.studentTaskList:
+                getStudentTaskInfo(jsonObject);
+                break;
         }
     }
 
@@ -118,6 +122,14 @@ public class OperatorSocketData implements Runnable{
     private void getAllTaskInfoList() {
         List<TaskInfo> list = taskInfoService.getAllTaskInfoList();
         ServerSend send = new ServerSend(JSONUtil.getAllTaskInfoList(list));
+        new Thread(send).start();
+    }
+
+    private void getStudentTaskInfo(JSONObject jsonObject) {
+        getAllTaskInfoList();
+        StudentTask studentAccount = new StudentTask(jsonObject);
+        StudentTask task = studentService.getStudentTaskInfo(studentAccount.getAccount());
+        ServerSend send = new ServerSend(JSONUtil.getStudentTaskInfo(task));
         new Thread(send).start();
     }
 

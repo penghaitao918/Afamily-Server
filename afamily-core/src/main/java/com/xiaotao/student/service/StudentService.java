@@ -1,6 +1,8 @@
 package com.xiaotao.student.service;
 
 import com.xiaotao.student.model.Student;
+import com.xiaotao.student.model.StudentTask;
+import org.apache.ibatis.annotations.Param;
 
 import java.net.Socket;
 
@@ -14,4 +16,6 @@ public interface StudentService {
     int register(Student user);
 
     void logout(int port);
+
+    StudentTask getStudentTaskInfo(@Param("account") String account);
 }

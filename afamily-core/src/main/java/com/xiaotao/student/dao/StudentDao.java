@@ -3,6 +3,8 @@ package com.xiaotao.student.dao;
 import com.xiaotao.mybatis.MyBatisScan;
 import com.xiaotao.student.model.OnLine;
 import com.xiaotao.student.model.Student;
+import com.xiaotao.student.model.StudentTask;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * Created by acmer on 2016/3/31.
@@ -17,5 +19,7 @@ public interface StudentDao {
     void online_in(OnLine onLine);
 
     void online_out(int port);
+
+    StudentTask getStudentTaskInfo(@Param("account") String account);
 
 }

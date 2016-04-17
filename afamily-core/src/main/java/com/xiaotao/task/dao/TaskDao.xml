@@ -9,8 +9,7 @@
     <select id="getAllTaskInfoList" resultType="com.xiaotao.task.model.TaskInfo">
         SELECT * FROM task
         <where>
-            <if test="task_name != '' or task_name != null">
-            </if>
+            task_name != '' or task_name != null
         </where>
         ${sortField} ${sortOrder}
     </select>

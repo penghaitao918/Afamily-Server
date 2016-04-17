@@ -3,8 +3,10 @@ package com.xiaotao.student.service.impl;
 import com.xiaotao.student.dao.StudentDao;
 import com.xiaotao.student.model.OnLine;
 import com.xiaotao.student.model.Student;
+import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
 import com.xiaotao.user.dao.UserDao;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -39,6 +41,11 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public void logout(int port) {
         studentDao.online_out(port);
+    }
+
+    @Override
+    public StudentTask getStudentTaskInfo(@Param("account") String account) {
+        return studentDao.getStudentTaskInfo(account);
     }
 
 
