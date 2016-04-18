@@ -48,5 +48,21 @@ public class StudentServiceImpl implements StudentService {
         return studentDao.getStudentTaskInfo(account);
     }
 
+    @Override
+    public void submitTask(StudentTask task) {
+        switch (task.getTaskId()) {
+            case 0: studentDao.submitTask0(task); break;
+            case 1: studentDao.submitTask1(task); break;
+            case 2: studentDao.submitTask2(task); break;
+            case 3: studentDao.submitTask3(task); break;
+            case 4: studentDao.submitTask4(task); break;
+            case 5: studentDao.submitTask5(task); break;
+            case 6: studentDao.submitTask6(task); break;
+            case 7: studentDao.submitTask7(task); break;
+            case 8: studentDao.submitTask8(task); break;
+            case 9: studentDao.submitTask9(task); break;
+        }
+    }
+
 
 }

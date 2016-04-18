@@ -24,6 +24,8 @@ public class JSONUtil {
     public static final int logout = 3;
     public static final int taskList = 4;
     public static final int studentTaskList = 5;
+    public static final int submitTask = 6;
+    public static final int sendConversationMessage = 7;
 
     //  心跳检测
     public static JSONObject connectCheck() {

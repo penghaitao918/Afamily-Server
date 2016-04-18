@@ -30,7 +30,9 @@ import org.json.JSONObject;
  */
 public class StudentTask {
 
+    private int taskId = -1;
     private String account = null;
+
     private boolean task0 = false;
     private boolean task1 = false;
     private boolean task2 = false;
@@ -43,7 +45,18 @@ public class StudentTask {
     private boolean task9 = false;
 
     public StudentTask() {}
-    public StudentTask(JSONObject jsonObject) {
+    public StudentTask(JSONObject jsonObject, int type) {
+       switch (type) {
+           case 0:
+               getTaskInfo(jsonObject);
+               break;
+           case 1:
+               submitTask(jsonObject);
+               break;
+       }
+    }
+
+    private void getTaskInfo(JSONObject jsonObject) {
         try {
             this.account = jsonObject.getString(info.account);
         }catch (JSONException e){
@@ -51,8 +64,26 @@ public class StudentTask {
         }
     }
 
+    private void submitTask(JSONObject jsonObject) {
+        try {
+            this.account = jsonObject.getString(info.account);
+            this.taskId = jsonObject.getInt(info.taskId);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+    }
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
+    }
+
     //  info
     public static final class info {
+        public static final String taskId = "TASK_ID";
         public static final String account = "USER_ACCOUNT";
         public static final String task0 = "TASK_A";
         public static final String task1 = "TASK_B";

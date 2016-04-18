@@ -18,4 +18,6 @@ public interface StudentService {
     void logout(int port);
 
     StudentTask getStudentTaskInfo(@Param("account") String account);
+
+    void submitTask(StudentTask task);
 }
