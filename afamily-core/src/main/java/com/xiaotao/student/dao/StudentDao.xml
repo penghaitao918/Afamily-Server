@@ -39,5 +39,40 @@
         update online set flag=0 where port=#{port} and flag=1
     </update>
 
+    <select id="getStudentTaskInfo" resultType="com.xiaotao.student.model.StudentTask" parameterType="java.lang.String">
+        select * from student_task where account = #{account}
+    </select>
+
+    <update id="submitTask0" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task0=1 where account=#{account}
+    </update>
+    <update id="submitTask1" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task1=1 where account=#{account}
+    </update>
+    <update id="submitTask2" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task2=1 where account=#{account}
+    </update>
+    <update id="submitTask3" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task3=1 where account=#{account}
+    </update>
+    <update id="submitTask4" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task4=1 where account=#{account}
+    </update>
+    <update id="submitTask5" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task5=1 where account=#{account}
+    </update>
+    <update id="submitTask6" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task6=1 where account=#{account}
+    </update>
+    <update id="submitTask7" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task7=1 where account=#{account}
+    </update>
+    <update id="submitTask8" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task8=1 where account=#{account}
+    </update>
+    <update id="submitTask9" parameterType="com.xiaotao.student.model.StudentTask">
+        update student_task set task9=1 where account=#{account}
+    </update>
+
 
 </mapper>

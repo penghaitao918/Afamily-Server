@@ -1,7 +1,9 @@
 package com.xiaotao.util;
 
 import com.xiaotao.student.model.Student;
+import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.task.model.TaskInfo;
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -21,6 +23,9 @@ public class JSONUtil {
     public static final int reLogin = 2;
     public static final int logout = 3;
     public static final int taskList = 4;
+    public static final int studentTaskList = 5;
+    public static final int submitTask = 6;
+    public static final int sendConversationMessage = 7;
 
     //  心跳检测
     public static JSONObject connectCheck() {
@@ -70,11 +75,42 @@ public class JSONUtil {
         return logoutJSON;
     }
 
+    //  获取任务列表
     public static JSONObject getAllTaskInfoList(List<TaskInfo> list) {
         JSONObject logoutJSON = new JSONObject();
+        JSONArray idJsonArray = new JSONArray();
+        JSONArray nameJsonArray = new JSONArray();
         try {
+            for(int i = 0; i < list.size(); i++)
+            {
+                idJsonArray.put(i, list.get(i).getTaskId());
+                nameJsonArray.put(i, list.get(i).getTaskName());
+            }
             logoutJSON.put(JSONType, taskList);
-            //  TODO JSON 存放 List
+            logoutJSON.put(TaskInfo.info.taskId, idJsonArray);
+            logoutJSON.put(TaskInfo.info.taskName, nameJsonArray);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return logoutJSON;
+    }
+
+
+    //  获取任务完成情况
+    public static JSONObject getStudentTaskInfo(StudentTask task){
+        JSONObject logoutJSON = new JSONObject();
+        try {
+            logoutJSON.put(JSONType, studentTaskList);
+            logoutJSON.put(StudentTask.info.task0, task.isTask0());
+            logoutJSON.put(StudentTask.info.task1, task.isTask1());
+            logoutJSON.put(StudentTask.info.task2, task.isTask2());
+            logoutJSON.put(StudentTask.info.task3, task.isTask3());
+            logoutJSON.put(StudentTask.info.task4, task.isTask4());
+            logoutJSON.put(StudentTask.info.task5, task.isTask5());
+            logoutJSON.put(StudentTask.info.task6, task.isTask6());
+            logoutJSON.put(StudentTask.info.task7, task.isTask7());
+            logoutJSON.put(StudentTask.info.task8, task.isTask8());
+            logoutJSON.put(StudentTask.info.task9, task.isTask9());
         }catch (JSONException e){
             e.printStackTrace();
         }

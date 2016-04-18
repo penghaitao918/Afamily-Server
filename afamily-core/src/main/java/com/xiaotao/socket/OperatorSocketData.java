@@ -3,6 +3,7 @@ package com.xiaotao.socket;
 import com.xiaotao.log.model.Log;
 import com.xiaotao.log.service.LogService;
 import com.xiaotao.student.model.Student;
+import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
 import com.xiaotao.task.model.TaskInfo;
 import com.xiaotao.task.service.TaskInfoService;
@@ -17,6 +18,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.Socket;
+import java.net.SocketException;
 import java.util.Iterator;
 import java.util.List;
 
@@ -99,26 +101,17 @@ public class OperatorSocketData implements Runnable{
             case JSONUtil.taskList:
                 getAllTaskInfoList();
                 break;
+            case JSONUtil.studentTaskList:
+                getStudentTaskInfo(jsonObject);
+                break;
+            case JSONUtil.submitTask:
+                submitTask(jsonObject);
+                System.out.println("获取消息");
+                break;
+            case JSONUtil.sendConversationMessage:
+                sendConversationMessageToAllClient(jsonObject);
+                break;
         }
-    }
-
-    private void login(JSONObject jsonObject, int type) {
-        ServerSend send = null;
-        Student client = new Student(jsonObject);
-        Student server = studentService.login(client, s);
-        if (server != null){
-            //  TODO 先判断是否在线 未实现
-            send = new ServerSend(JSONUtil.login(server, type));
-        }else {
-            send = new ServerSend(JSONUtil.login(null, type));
-        }
-        new Thread(send).start();
-    }
-
-    private void getAllTaskInfoList() {
-        List<TaskInfo> list = taskInfoService.getAllTaskInfoList();
-        ServerSend send = new ServerSend(JSONUtil.getAllTaskInfoList(list));
-        new Thread(send).start();
     }
 
     private void closeSocket(){
@@ -150,6 +143,64 @@ public class OperatorSocketData implements Runnable{
             }catch (Exception e) {
                 e.printStackTrace();
             }
+        }
+    }
+
+/*
+ ***************************************************************
+ ***************** 服务器数据请求实现 **************************
+ ***************************************************************
+ */
+
+
+    private void login(JSONObject jsonObject, int type) {
+        ServerSend send = null;
+        Student client = new Student(jsonObject);
+        Student server = studentService.login(client, s);
+        if (server != null){
+            //  TODO 先判断是否在线 未实现
+            send = new ServerSend(JSONUtil.login(server, type));
+        }else {
+            send = new ServerSend(JSONUtil.login(null, type));
+        }
+        new Thread(send).start();
+    }
+
+    private void getAllTaskInfoList() {
+        List<TaskInfo> list = taskInfoService.getAllTaskInfoList();
+        ServerSend send = new ServerSend(JSONUtil.getAllTaskInfoList(list));
+        new Thread(send).start();
+    }
+
+    private void getStudentTaskInfo(JSONObject jsonObject) {
+        getAllTaskInfoList();
+        StudentTask studentAccount = new StudentTask(jsonObject, 0);
+        StudentTask task = studentService.getStudentTaskInfo(studentAccount.getAccount());
+        ServerSend send = new ServerSend(JSONUtil.getStudentTaskInfo(task));
+        new Thread(send).start();
+    }
+
+    private void submitTask(JSONObject jsonObject) {
+        StudentTask task = new StudentTask(jsonObject, 1);
+        studentService.submitTask(task);
+    }
+
+    private void sendConversationMessageToAllClient(final JSONObject jsonObject) {
+        try {
+            for (Iterator<Socket> it = SocketThread.socketList.iterator(); it.hasNext(); )
+            {
+                Socket s = it.next();
+                try{
+                    OutputStream os = s.getOutputStream();
+                    os.write((jsonObject + "\r\n").getBytes("utf-8"));
+                }
+                catch(SocketException e)
+                {
+                    e.printStackTrace();
+                }
+            }
+        }catch (Exception e){
+            e.printStackTrace();
         }
     }
 }

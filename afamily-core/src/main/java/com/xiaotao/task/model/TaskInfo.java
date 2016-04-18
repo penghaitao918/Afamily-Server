@@ -53,4 +53,10 @@ public class TaskInfo {
     public void setTaskName(String taskName) {
         this.taskName = taskName;
     }
+
+    //  info
+    public static final class info {
+        public static final String taskId = "TASK_ID";
+        public static final String taskName = "TASK_NAME";
+    }
 }

@@ -1,7 +1,6 @@
 package com.xiaotao.task.dao;
 
 import com.xiaotao.mybatis.MyBatisScan;
-import com.xiaotao.student.model.Task;
 import com.xiaotao.task.model.TaskInfo;
 
 import java.util.List;
