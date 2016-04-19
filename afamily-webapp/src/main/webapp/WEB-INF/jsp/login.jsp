@@ -55,7 +55,6 @@
         });
         //验证码
         createCode();
-        //测试提交，对接程序删除即可
         $(".submit_btn").click(function(){
             validate();
         });

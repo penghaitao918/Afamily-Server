@@ -34,18 +34,18 @@
                     <div class="form-group">
                         <label class="col-sm-2 control-label">标题</label>
                         <div class="col-sm-8">
-                            <input type="text" class="form-control" placeholder="请输入标题">
+                            <input type="text" id="titleInput" class="form-control" placeholder="请输入标题">
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label">内容</label>
                         <div class="col-sm-8">
-                            <textarea class="form-control" rows="12" style="resize: vertical"></textarea>
+                            <textarea id="bodyInput" class="form-control" rows="12" style="resize: vertical"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-8">
-                            <button type="submit" class="btn btn-success">提交</button>
+                            <button type="submit" class="btn btn-success" onclick="sendNotificationToAllUser()">提交</button>
                         </div>
                     </div>
                 </form>
@@ -56,3 +56,25 @@
 </div>
 </body>
 </html>
+
+<script>
+    function sendNotificationToAllUser(){
+        $.ajax({
+            url: basePath + "sendNotification",
+            data: {
+                title: $("#titleInput").val(),
+                message: $("#bodyInput").val()
+            },
+            dataType: "json",
+            type: "POST",
+            async:false,
+            success:
+                    function (data) {
+                        alert("通知发送成功");
+                    },
+            error: function(){
+                alert("通知发送错误")
+            }
+        });
+    }
+</script>

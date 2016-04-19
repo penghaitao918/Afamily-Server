@@ -64,6 +64,7 @@
             <div class="container">
                 <div class="two-dimensional">
                     <div class="thumbnail">
+                        <%--在这里放图片--%>
                         <img alt="320x320" width="320px" height="320px">
                         <div class="caption">
                             <h3>扫描二维码</h3>

@@ -117,4 +117,23 @@ public class JSONUtil {
         return logoutJSON;
     }
 
+    //  发送通知
+    public static JSONObject sendNotificationToAllUser(String title, String message){
+        JSONObject logoutJSON = new JSONObject();
+        try {
+            logoutJSON.put(JSONType, notify);
+            logoutJSON.put(notifyInfo.notifyTitle, title);
+            logoutJSON.put(notifyInfo.notifyMessage, message);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return logoutJSON;
+    }
+
+
+    public static final class notifyInfo {
+        public static final String notifyTitle = "NOTIFY_TITLE";
+        public static final String notifyMessage = "NOTIFY_MESSAGE";
+    }
+
 }
