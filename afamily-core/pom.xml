@@ -140,6 +140,11 @@
             <artifactId>spring-context</artifactId>
             <version>3.2.8.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>com.genghis.steed</groupId>
+            <artifactId>steed-core</artifactId>
+            <version>1.0.7</version>
+        </dependency>
     </dependencies>
 
 </project>

@@ -157,6 +157,11 @@
             <artifactId>jackson-module-jaxb-annotations</artifactId>
             <version>2.3.2</version>
         </dependency>
+        <dependency>
+            <groupId>com.genghis.steed</groupId>
+            <artifactId>steed-core</artifactId>
+            <version>1.0.7</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -75,4 +75,8 @@
     </update>
 
 
+    <select id="getAllStudentTaskInfoList" resultType="com.xiaotao.student.model.StudentTask">
+        select * from student_task order by id asc
+    </select>
+
 </mapper>

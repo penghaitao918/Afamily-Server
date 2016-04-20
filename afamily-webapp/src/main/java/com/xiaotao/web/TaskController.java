@@ -1,20 +1,19 @@
 package com.xiaotao.web;
 
+import com.genghis.steed.ajax.response.PageResponse;
 import com.xiaotao.BaseController;
+import com.xiaotao.student.model.StudentTask;
+import com.xiaotao.student.service.StudentService;
 import com.xiaotao.task.model.TaskInfo;
 import com.xiaotao.task.service.TaskInfoService;
-import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-//import sun.plugin.javascript.navig.Array;
 
 import javax.servlet.http.HttpSession;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -46,6 +45,8 @@ public class TaskController extends BaseController {
 
     @Autowired
     private TaskInfoService taskInfoService;
+    @Autowired
+    private StudentService studentService;
 
     @RequestMapping(value = "/publish/task", method = {RequestMethod.GET})
     public String setTask(HttpSession session) {
@@ -74,6 +75,16 @@ public class TaskController extends BaseController {
             taskInfoService.publish(new TaskInfo(i+1, array[i]));
         }
         return true;
+    }
+
+    @RequestMapping(value = "/task/findAllTaskInfo", method = {RequestMethod.POST})
+    @ResponseBody
+    public PageResponse<StudentTask> findAllStudentTask(StudentTask studentTask) {
+        PageResponse<StudentTask> pageResponse = new PageResponse<>(studentTask.getPage(),studentService.getAllStudentTaskInfoList());
+        ArrayList<StudentTask> arrayList = new ArrayList<StudentTask>(pageResponse.getResultList());
+        for (int i = 0; i < arrayList.size(); ++ i)
+            System.out.println("## " + arrayList.get(i).getAccount());
+        return pageResponse;
     }
 
 }

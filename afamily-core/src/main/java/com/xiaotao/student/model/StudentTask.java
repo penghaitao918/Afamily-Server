@@ -1,5 +1,6 @@
 package com.xiaotao.student.model;
 
+import com.genghis.steed.mybatis.model.PageBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -28,7 +29,9 @@ import org.json.JSONObject;
  * @author xiaoTao
  * @date 2016-04-13  14:31
  */
-public class StudentTask {
+public class StudentTask extends PageBase {
+
+    private int id = -1;
 
     private int taskId = -1;
     private String account = null;
@@ -79,6 +82,14 @@ public class StudentTask {
 
     public void setTaskId(int taskId) {
         this.taskId = taskId;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     //  info

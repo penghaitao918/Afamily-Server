@@ -4,7 +4,10 @@ import com.xiaotao.mybatis.MyBatisScan;
 import com.xiaotao.student.model.OnLine;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
+import com.xiaotao.task.model.TaskInfo;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * Created by acmer on 2016/3/31.
@@ -32,5 +35,7 @@ public interface StudentDao {
     void submitTask7(StudentTask task);
     void submitTask8(StudentTask task);
     void submitTask9(StudentTask task);
+
+    List<StudentTask> getAllStudentTaskInfoList();
 
 }

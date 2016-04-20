@@ -48,36 +48,7 @@
                         <th>J</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                    </tr>
-                    <tr>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 1</td>
-                        <td>Row 1 Data 2</td>
-                    </tr>
-                    </tbody>
+                    <tbody></tbody>
                 </table>
             </div>
         </div>
@@ -87,28 +58,57 @@
 <script>
     $(function () {
         $("#task-list").DataTable({
-            language:{
-                "decimal":        "",
-                "emptyTable":     "没有数据",
-                "info":           "当前为 _START_ 至 _END_ 号记录 , 一共 _TOTAL_ 条记录",
-                "infoEmpty":      "当前为 0 至 0 号记录 , 一共 0 条记录",
-                "infoFiltered":   "(找到 _MAX_ 条记录)",
-                "infoPostFix":    "",
-                "thousands":      ",",
-                "lengthMenu":     "显示 _MENU_ 条记录",
-                "loadingRecords": "加载中...",
-                "processing":     "Processing...",
-                "search":         "查询:",
-                "zeroRecords":    "没有找到匹配记录",
-                "paginate": {
-                    "first":      "第一页",
-                    "last":       "最后一页",
-                    "next":       "下一页",
-                    "previous":   "上一页"
+                    "ajax" :$.ajax({
+                        url: basePath + "task/findAllTaskInfo",
+                        dataType: "json",
+                        type: "POST",
+                        async:false,
+                        traditional: true,
+                        success: function (data) {
+                            alert("成功");
+                        },
+                        error: function(){
+                            alert("错误")
+                        }
+                    }),
+                    "columns": [
+                        { "data": "id" },
+                        { "data": "account" },
+                        { "data": "task0" },
+                        { "data": "task1" },
+                        { "data": "task2" },
+                        { "data": "task3" },
+                        { "data": "task4" },
+                        { "data": "task5" },
+                        { "data": "task6" },
+                        { "data": "task7" },
+                        { "data": "task8" },
+                        { "data": "task9" }
+                    ],
+                    language:{
+                        "decimal":        "",
+                        "emptyTable":     "没有数据",
+                        "info":           "当前为 _START_ 至 _END_ 号记录 , 找到 _TOTAL_ 条记录",
+                        "infoEmpty":      "当前为 0 至 0 号记录 , 一共 0 条记录",
+                        "infoFiltered":   "(一共 _MAX_ 条记录)",
+                        "infoPostFix":    "",
+                        "thousands":      ",",
+                        "lengthMenu":     "显示 _MENU_ 条记录",
+                        "loadingRecords": "加载中...",
+                        "processing":     "Processing...",
+                        "search":         "查询:",
+                        "zeroRecords":    "没有找到匹配记录",
+                        "paginate": {
+                            "first":      "第一页",
+                            "last":       "最后一页",
+                            "next":       "下一页",
+                            "previous":   "上一页"
+                        }
+                    }
                 }
-            }
-        });
-    })
+        );
+    });
+
 </script>
 </body>
 </html>

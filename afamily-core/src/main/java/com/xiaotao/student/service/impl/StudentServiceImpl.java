@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.net.Socket;
+import java.util.List;
 
 /**
  * Created by tao on 16-2-28.
@@ -62,6 +63,11 @@ public class StudentServiceImpl implements StudentService {
             case 8: studentDao.submitTask8(task); break;
             case 9: studentDao.submitTask9(task); break;
         }
+    }
+
+    @Override
+    public List<StudentTask> getAllStudentTaskInfoList() {
+        return studentDao.getAllStudentTaskInfoList();
     }
 
 
