@@ -44,4 +44,14 @@ public class TaskInfoServiceImpl implements TaskInfoService {
     public List<TaskInfo> getAllTaskInfoList() {
         return taskDao.getAllTaskInfoList();
     }
+
+    @Override
+    public void publish(TaskInfo taskInfo) {
+        taskDao.publish(taskInfo);
+    }
+
+    @Override
+    public void deleteAllTask() {
+        taskDao.deleteAllTask();
+    }
 }

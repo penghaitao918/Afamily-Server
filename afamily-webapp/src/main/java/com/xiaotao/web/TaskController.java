@@ -1,14 +1,20 @@
 package com.xiaotao.web;
 
 import com.xiaotao.BaseController;
-import com.xiaotao.user.model.User;
+import com.xiaotao.task.model.TaskInfo;
+import com.xiaotao.task.service.TaskInfoService;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+//import sun.plugin.javascript.navig.Array;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * ━━━━━━神兽出没━━━━━━
@@ -33,48 +39,41 @@ import javax.servlet.http.HttpSession;
  * ━━━━━━感觉萌萌哒━━━━━━
  *
  * @author xiaoTao
- * @date 2016-04-10  11:10
+ * @date 2016-04-20  14:45
  */
-
 @Controller
-public class HomeController extends BaseController {
+public class TaskController extends BaseController {
 
-    @RequestMapping(value = "/login", method = {RequestMethod.GET})
-    public String login(HttpServletRequest request, HttpSession session) {
-        return "login";
-    }
+    @Autowired
+    private TaskInfoService taskInfoService;
 
-    @RequestMapping(value = "/logout", method = {RequestMethod.GET})
-    public String logout(HttpSession session) {
-        session.invalidate();
-        return "login";
-    }
-
-    @RequestMapping(value = "/", method = {RequestMethod.GET})
-    public String index(HttpSession session) {
+    @RequestMapping(value = "/publish/task", method = {RequestMethod.GET})
+    public String setTask(HttpSession session) {
         if (isLogin(session)){
-            return "index";
+            return "task/publish";
         }else {
             return "redirect:/login";
         }
     }
 
-    @RequestMapping(value = "/publish/notification", method = {RequestMethod.GET})
-    public String setNotify(HttpSession session) {
+    @RequestMapping(value = "/info/task", method = {RequestMethod.GET})
+    public String getTask(HttpSession session) {
         if (isLogin(session)){
-            return "notification/publish";
+            return "task/info";
         }else {
             return "redirect:/login";
         }
     }
 
-    @RequestMapping(value = "/info/options", method = {RequestMethod.GET})
-    public String getOption(HttpSession session) {
-        if (isLogin(session)){
-            return "options/info";
-        }else {
-            return "redirect:/login";
+
+    @RequestMapping(value = "/publish/taskDo", method = {RequestMethod.POST})
+    @ResponseBody
+    public boolean publish(String[] array) {
+        taskInfoService.deleteAllTask();
+        for (int i = 0; i < array.length; ++ i) {
+            taskInfoService.publish(new TaskInfo(i+1, array[i]));
         }
+        return true;
     }
 
 }

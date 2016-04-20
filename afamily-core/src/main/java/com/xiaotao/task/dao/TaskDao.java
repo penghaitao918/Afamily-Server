@@ -36,4 +36,8 @@ public interface TaskDao {
 
     List<TaskInfo> getAllTaskInfoList();
 
+    void publish(TaskInfo taskInfo);
+
+    void deleteAllTask();
+
 }

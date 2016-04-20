@@ -33,4 +33,7 @@ public interface TaskInfoService {
 
     List<TaskInfo> getAllTaskInfoList();
 
+    void publish(TaskInfo taskInfo);
+
+    void deleteAllTask();
 }

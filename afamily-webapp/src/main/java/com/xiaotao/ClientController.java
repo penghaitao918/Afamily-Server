@@ -1,4 +1,4 @@
-package com.xiaotao.web;
+package com.xiaotao;
 
 import com.xiaotao.socket.OperatorSocketData;
 import com.xiaotao.socket.SocketThread;
@@ -51,5 +51,11 @@ public class ClientController {
     @ResponseBody
     public boolean sendNotificationToAllUser(String title, String message) {
         return clientService.sendNotificationToAllUser(title, message);
+    }
+
+    @RequestMapping(value = "/agreement", method = {RequestMethod.GET})
+    public String agreement() {
+        return "register/agreement";
+        //      return "test";
     }
 }

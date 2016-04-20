@@ -20,5 +20,9 @@
     <update id="publish" parameterType="com.xiaotao.task.model.TaskInfo">
         update task set task_name=#{taskName} where task_id=#{taskId}
     </update>
+    
+    <delete id="deleteAllTask">
+        update task set task_name = null
+    </delete>
 
 </mapper>

@@ -35,7 +35,7 @@
                         <label class="col-md-2 control-label text-right font-18">1.</label>
 
                         <div class="col-md-8">
-                            <input type="text" class="form-control task-content" placeholder="任务">
+                            <input type="text" id="task1" class="form-control task-content" placeholder="任务">
                         </div>
                         <div class="col-md-2">
                             <button type="button" class="btn btn-danger delete-task">删除</button>
@@ -52,6 +52,9 @@
 </div>
 <script type="text/javascript">
 
+    var maxTaskNum = 1;
+    var array = [];
+
     var Publish_Task_Module = function () {
     };
 
@@ -63,10 +66,16 @@
             content = '';
         } else {
             num = data.number;
-            content = data.content;
+            content = data.content;6
         }
+        maxTaskNum = num;
         item.append('<label class="col-md-2 control-label text-right font-18">' + num + '.</label>');
-        item.append('<div class="col-md-8"><input type="text" class="form-control task-content" placeholder="任务" value="' + content + '"> </div> <div class="col-md-2"> <button class="btn btn-danger delete-task">删除</button> </div>');
+        item.append('<div class="col-md-8">' +
+                '<input type="text" class="form-control task-content" placeholder="任务" id="task' + num +'"> ' +
+                '</div> ' +
+                '<div class="col-md-2"> ' +
+                '<button class="btn btn-danger delete-task" value="123">删除</button>' +
+                ' </div>');
         return item;
     };
 
@@ -86,6 +95,10 @@
         });
 
         $("#publish-task").on('click',function (e){
+            for(var i = 1; i <= maxTaskNum; ++ i) {
+                array.push($("#task"+i).val())
+            }
+            publish();
             e.stopPropagation();
         });
     };
@@ -94,6 +107,27 @@
         var module = new Publish_Task_Module();
         module.init();
     });
+
+    function publish(){
+        $.ajax({
+            url: basePath + "publish/taskDo",
+            data: {
+                "array" : array
+            },
+            dataType: "json",
+            type: "POST",
+            async:false,
+            traditional: true,
+            success: function (data) {
+                array = [];
+                alert("任务发布成功");
+            },
+            error: function(){
+                alert("错误")
+            }
+        });
+    }
+
 </script>
 </body>
 </html>
