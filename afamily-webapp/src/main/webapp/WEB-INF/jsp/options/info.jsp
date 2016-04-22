@@ -43,10 +43,10 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td class="num">Row 1 Data 1</td>
-                        <td class="title">Row 1 Data 2</td>
-                        <td class="author">Row 1 Data 1</td>
-                        <td class="time">Row 1 Data 2</td>
+                        <td class="num">哈哈</td>
+                        <td class="title">嘿嘿</td>
+                        <td class="author">嘻嘻</td>
+                        <td class="time">呵呵</td>
                         <td>
                             <button class="btn btn-primary advice-detail">查阅</button>
                             <button class="btn btn-danger advice-remove">删除</button>
@@ -112,7 +112,8 @@
 
         var table = (function () {
             return $("#advice-list").DataTable({
-                language: {
+                "autoWidth": true,   // enable/disable fixed width and enable fluid table
+                "language": {
                     "decimal": "",
                     "emptyTable": "没有数据",
                     "info": "当前为 _START_ 至 _END_ 号记录 , 一共 _TOTAL_ 条记录",

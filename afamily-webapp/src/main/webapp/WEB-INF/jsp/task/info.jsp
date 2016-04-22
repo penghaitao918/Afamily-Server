@@ -58,34 +58,28 @@
 <script>
     $(function () {
         $("#task-list").DataTable({
-                    "ajax" :$.ajax({
-                        url: basePath + "task/findAllTaskInfo",
-                        dataType: "json",
-                        type: "POST",
-                        async:false,
-                        traditional: true,
-                        success: function (data) {
-                            alert("成功");
-                        },
-                        error: function(){
-                            alert("错误")
-                        }
-                    }),
+                    "autoWidth": true,   // enable/disable fixed width and enable fluid table
+                    "processing": true, // enable/disable display message box on record load
+                    "ajax": function (data, fnCallback) {
+                        $.ajax({
+                            "url": basePath + "task/findAllTaskInfo",
+                            "dataType": 'json',
+                            "type": "POST",
+                            "success": function (result) {
+                                result.data = result.resultList;
+                                fnCallback(result);
+
+                            },
+                            "error": function () {
+                            }
+                        });
+                    },
                     "columns": [
-                        { "data": "id" },
-                        { "data": "account" },
-                        { "data": "task0" },
-                        { "data": "task1" },
-                        { "data": "task2" },
-                        { "data": "task3" },
-                        { "data": "task4" },
-                        { "data": "task5" },
-                        { "data": "task6" },
-                        { "data": "task7" },
-                        { "data": "task8" },
-                        { "data": "task9" }
+                        { data: "id" },
+                        { data: "account" },{ data: "task0" },{ data: "task1" },{ data: "task2" },{ data: "task3" },{ data: "task4" },
+                        { data: "task5" },{ data: "task6" }, { data: "task7" },{ data: "task8" },{ data: "task9" }
                     ],
-                    language:{
+                    "language":{
                         "decimal":        "",
                         "emptyTable":     "没有数据",
                         "info":           "当前为 _START_ 至 _END_ 号记录 , 找到 _TOTAL_ 条记录",
@@ -98,6 +92,7 @@
                         "processing":     "Processing...",
                         "search":         "查询:",
                         "zeroRecords":    "没有找到匹配记录",
+                        "ajaxRequestGeneralError": "请求失败，请检查您的网络连接",
                         "paginate": {
                             "first":      "第一页",
                             "last":       "最后一页",

@@ -80,11 +80,7 @@ public class TaskController extends BaseController {
     @RequestMapping(value = "/task/findAllTaskInfo", method = {RequestMethod.POST})
     @ResponseBody
     public PageResponse<StudentTask> findAllStudentTask(StudentTask studentTask) {
-        PageResponse<StudentTask> pageResponse = new PageResponse<>(studentTask.getPage(),studentService.getAllStudentTaskInfoList());
-        ArrayList<StudentTask> arrayList = new ArrayList<StudentTask>(pageResponse.getResultList());
-        for (int i = 0; i < arrayList.size(); ++ i)
-            System.out.println("## " + arrayList.get(i).getAccount());
-        return pageResponse;
+        return new PageResponse<StudentTask>(studentTask.getPage(),studentService.getAllStudentTaskInfoList());
     }
 
 }
