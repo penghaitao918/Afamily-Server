@@ -68,13 +68,4 @@ public class HomeController extends BaseController {
         }
     }
 
-    @RequestMapping(value = "/info/options", method = {RequestMethod.GET})
-    public String getOption(HttpSession session) {
-        if (isLogin(session)){
-            return "options/info";
-        }else {
-            return "redirect:/login";
-        }
-    }
-
 }

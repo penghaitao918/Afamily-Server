@@ -1,7 +1,7 @@
 package com.xiaotao.socket;
 
-import com.xiaotao.log.model.Log;
-import com.xiaotao.log.service.LogService;
+import com.xiaotao.feedback.model.Feedback;
+import com.xiaotao.feedback.service.FeedbackService;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
@@ -79,6 +79,8 @@ public class OperatorSocketData implements Runnable{
     private StudentService studentService = (StudentService) SpringUtil.getBean("studentService");
     @Autowired
     private TaskInfoService taskInfoService = (TaskInfoService) SpringUtil.getBean("taskInfoService");
+    @Autowired
+    private FeedbackService feedbackService = (FeedbackService) SpringUtil.getBean("feedbackService");
 
     //  定义处理用户请求的方法
     private void dealWithUserRequest(int type, JSONObject jsonObject) throws JSONException {
@@ -88,15 +90,15 @@ public class OperatorSocketData implements Runnable{
         }
         ServerSend serverSend = null;
         switch (type){
-            case JSONUtil.logout:
-                studentService.logout(s.getPort());
-                closeSocket();
-                break;
             case JSONUtil.login:
                 login(jsonObject, 1);
                 break;
             case JSONUtil.reLogin:
                 login(jsonObject,0);
+                break;
+            case JSONUtil.logout:
+                studentService.logout(s.getPort());
+                closeSocket();
                 break;
             case JSONUtil.taskList:
                 getAllTaskInfoList();
@@ -106,10 +108,12 @@ public class OperatorSocketData implements Runnable{
                 break;
             case JSONUtil.submitTask:
                 submitTask(jsonObject);
-                System.out.println("获取消息");
                 break;
             case JSONUtil.sendConversationMessage:
                 sendConversationMessageToAllClient(jsonObject);
+                break;
+            case JSONUtil.feedback:
+                feedback(jsonObject);
                 break;
         }
     }
@@ -203,4 +207,14 @@ public class OperatorSocketData implements Runnable{
             e.printStackTrace();
         }
     }
+
+    private void feedback(JSONObject jsonObject) {
+        Feedback feedback = new Feedback(jsonObject);
+        feedbackService.insert(feedback);
+        if (feedback.getId() > 0) {
+            ServerSend send = new ServerSend(JSONUtil.feedback());
+            new Thread(send).start();
+        }
+    }
+
 }

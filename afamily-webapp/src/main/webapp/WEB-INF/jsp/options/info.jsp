@@ -38,31 +38,10 @@
                         <th>标题</th>
                         <th>姓名</th>
                         <th>时间</th>
-                        <th>操作</th>
+                        <th style="width: 175px;">操作</th>
                     </tr>
                     </thead>
-                    <tbody>
-                    <tr>
-                        <td class="num">哈哈</td>
-                        <td class="title">嘿嘿</td>
-                        <td class="author">嘻嘻</td>
-                        <td class="time">呵呵</td>
-                        <td>
-                            <button class="btn btn-primary advice-detail">查阅</button>
-                            <button class="btn btn-danger advice-remove">删除</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="num">Row 2 Data 1</td>
-                        <td class="title">Row 1 Data 2</td>
-                        <td class="author">Row 1 Data 1</td>
-                        <td class="time">Row 1 Data 2</td>
-                        <td>
-                            <button class="btn btn-primary advice-detail">查阅</button>
-                            <button class="btn btn-danger advice-remove">删除</button>
-                        </td>
-                    </tr>
-                    </tbody>
+                    <tbody></tbody>
                 </table>
             </div>
 
@@ -82,22 +61,22 @@
                 <table class="table table-responsive">
                     <tbody>
                     <tr>
-                        <td>姓名</td>
+                        <td><b>姓名</b></td>
                         <td class="author"></td>
                     </tr>
                     <tr>
-                        <td>时间</td>
+                        <td><b>时间</b></td>
                         <td class="time"></td>
                     </tr>
                     <tr>
-                        <td>内容</td>
+                        <td><b>内容</b></td>
                         <td class="content"></td>
                     </tr>
                     </tbody>
                 </table>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" onclick="">关闭</button>
             </div>
         </div>
         <!-- /.modal-content -->
@@ -108,67 +87,104 @@
 <!-- /.modal -->
 <script src="<c:url value="/pulgins/DataTables-1.10.11/media/js/jquery.dataTables.js"/>"></script>
 <script>
-    $(function () {
+    var table = $("#advice-list").DataTable({
+        "bStateSave": true,
+        "order": [[ 1, 'asc' ]],
+        "autoWidth": true,   // enable/disable fixed width and enable fluid table
+        "processing": true, // enable/disable display message box on record load
+        "language": {
+            "decimal": "",
+            "emptyTable": "没有数据",
+            "info": "当前为 _START_ 至 _END_ 号记录 , 一共 _TOTAL_ 条记录",
+            "infoEmpty": "当前为 0 至 0 号记录 , 一共 0 条记录",
+            "infoFiltered": "(找到 _MAX_ 条记录)",
+            "infoPostFix": "",
+            "thousands": ",",
+            "lengthMenu": "显示 _MENU_ 条记录",
+            "loadingRecords": "加载中...",
+            "processing": "Processing...",
+            "search": "查询:",
+            "zeroRecords": "没有找到匹配记录",
+            "paginate": {
+                "first": "第一页",
+                "last": "最后一页",
+                "next": "下一页",
+                "previous": "上一页"
+            }
+        },
+        "ajax": function (data, fnCallback) {
+            $.ajax({
+                "url": basePath + "options/findAllOption",
+                "dataType": 'json',
+                "type": "POST",
+                "success": function (result) {
+                    result.data = result.resultList;
+                    fnCallback(result);
 
-        var table = (function () {
-            return $("#advice-list").DataTable({
-                "autoWidth": true,   // enable/disable fixed width and enable fluid table
-                "language": {
-                    "decimal": "",
-                    "emptyTable": "没有数据",
-                    "info": "当前为 _START_ 至 _END_ 号记录 , 一共 _TOTAL_ 条记录",
-                    "infoEmpty": "当前为 0 至 0 号记录 , 一共 0 条记录",
-                    "infoFiltered": "(找到 _MAX_ 条记录)",
-                    "infoPostFix": "",
-                    "thousands": ",",
-                    "lengthMenu": "显示 _MENU_ 条记录",
-                    "loadingRecords": "加载中...",
-                    "processing": "Processing...",
-                    "search": "查询:",
-                    "zeroRecords": "没有找到匹配记录",
-                    "paginate": {
-                        "first": "第一页",
-                        "last": "最后一页",
-                        "next": "下一页",
-                        "previous": "上一页"
-                    }
+                },
+                "error": function () {
                 }
             });
-        })();
-
-
-        (function (table) {
-            var modal = $('#advice-detail');
-
-            function _setModalData(data) {
-                $('.modal-title', modal).html(data.title);
-                $('.author', modal).html(data.author);
-                $('.time', modal).html(data.time);
-                $('.content', modal).html(data.content);
+        },
+        "columns": [
+            { data: "id" },
+            { data: "title" },
+            { data: "name" },
+            { data: "time" },
+            { data: 'operate',
+                render: function (data, type, full) {
+                    var returnValue = '<button class="btn btn-primary advice-detail" value="' + full.id + '" onclick="getInfo(' + full.id + ')">查阅</button>'
+                    returnValue += '<button class="pull-right btn btn-danger advice-remove" value="' + full.id + '" onclick="del('+full.id+')">删除</button>'
+                    return returnValue
+                }
             }
+        ]
+    });
+    table.on( 'order.dt search.dt', function () {
+        table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+            cell.innerHTML = i+1;
+        } );
+    } ).draw();
 
-            $('#advice-list').on('click', function (e) {
-                var $btn = $(e.target);
-                var $tr = $btn.closest('tr');
-                if ($btn.hasClass('advice-detail')) {
-                    var data = {
-                        num: $tr.children('.num').html(),
-                        title: $tr.children('.title').html(),
-                        author: $tr.children('.author').html(),
-                        time: $tr.children('.time').html()
-                    };
+    function del(id) {
+        $.ajax({
+            type:"POST",
+            url:basePath + "options/deleteById",
+            dataType:"json",
+            data: {
+                id: id
+            },
+            success:function(data) {
+                table.ajax.reload();
+            },
+            error:function(){
+                alert("Fail to acquire data");
+            }
+        });
+    }
 
-                    _setModalData(data);
+    function getInfo(id) {
+        var modal = $('#advice-detail');
+        $.ajax({
+            type:"POST",
+            url:basePath + "options/findOptionByID",
+            dataType:"json",
+            data: {
+                id: id
+            },
+            success:function(data) {
+                $('.modal-title', modal).html(data.title);
+                $('.author', modal).html(data.name);
+                $('.time', modal).html(data.time);
+                $('.content', modal).html(data.body);
+                modal.modal('show');
+            },
+            error:function(){
+                alert("Fail to acquire data");
+            }
+        });
+    }
 
-                    modal.modal('show');
-                    return;
-                }
-                if ($btn.hasClass('advice-remove')) {
-                    $tr.remove();
-                }
-            })
-        })(table);
-    })
 </script>
 </body>
 </html>

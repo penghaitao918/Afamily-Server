@@ -26,6 +26,7 @@ public class JSONUtil {
     public static final int studentTaskList = 5;
     public static final int submitTask = 6;
     public static final int sendConversationMessage = 7;
+    public static final int feedback = 8;
 
     //  心跳检测
     public static JSONObject connectCheck() {
@@ -130,10 +131,21 @@ public class JSONUtil {
         return logoutJSON;
     }
 
-
+    //  notification
     public static final class notifyInfo {
         public static final String notifyTitle = "NOTIFY_TITLE";
         public static final String notifyMessage = "NOTIFY_MESSAGE";
+    }
+
+    //  feedback
+    public static JSONObject feedback(){
+        JSONObject feedbackJSON = new JSONObject();
+        try {
+            feedbackJSON.put(JSONType, feedback);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return feedbackJSON;
     }
 
 }
