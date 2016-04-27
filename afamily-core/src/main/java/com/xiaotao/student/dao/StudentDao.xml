@@ -79,4 +79,8 @@
         select * from student_task order by id asc
     </select>
 
+    <update id="updateUserSex" parameterType="com.xiaotao.student.model.Student">
+        update student_user set sex=#{sex} where student_id=#{studentId}
+    </update>
+
 </mapper>

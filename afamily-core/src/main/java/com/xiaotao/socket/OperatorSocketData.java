@@ -115,6 +115,9 @@ public class OperatorSocketData implements Runnable{
             case JSONUtil.feedback:
                 feedback(jsonObject);
                 break;
+            case JSONUtil.updateUserInfo:
+                updateUserInfo(jsonObject);
+                break;
         }
     }
 
@@ -214,6 +217,25 @@ public class OperatorSocketData implements Runnable{
         if (feedback.getId() > 0) {
             ServerSend send = new ServerSend(JSONUtil.feedback());
             new Thread(send).start();
+        }
+    }
+
+    private void updateUserInfo(JSONObject jsonObject) {
+        int type = -1;
+        Student student = new Student();
+        try {
+            type = jsonObject.getInt(Student.updateUserInfo.updateType);
+            student.setStudentId(jsonObject.getString(Student.info.account));
+            switch (type) {
+                case Student.updateUserInfo.updateSex:
+                    student.setSex(jsonObject.getString(Student.updateUserInfo.updateBody));
+                    studentService.updateUserSex(student);
+                    break;
+            }
+            ServerSend send = new ServerSend(JSONUtil.updateUserInfo(type));
+            new Thread(send).start();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
     }
 

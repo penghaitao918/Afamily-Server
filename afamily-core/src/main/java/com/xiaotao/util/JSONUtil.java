@@ -27,6 +27,7 @@ public class JSONUtil {
     public static final int submitTask = 6;
     public static final int sendConversationMessage = 7;
     public static final int feedback = 8;
+    public static final int updateUserInfo = 9;
 
     //  心跳检测
     public static JSONObject connectCheck() {
@@ -52,16 +53,17 @@ public class JSONUtil {
             if (student != null) {
                 loginJSON.put(Student.info.loginFlag,true);
                 loginJSON.put(Student.info.account, student.getStudentId());
-                loginJSON.put(Student.info.portrait, student.getPortrait());
                 loginJSON.put(Student.info.name, student.getName());
                 loginJSON.put(Student.info.sex, student.getSex());
                 loginJSON.put(Student.info.classes, student.getClasses());
+                loginJSON.put(Student.info.portrait, student.getPortrait());
             }else {
                 loginJSON.put(Student.info.loginFlag, false);
             }
         }catch (JSONException e){
             e.printStackTrace();
         }
+        System.out.println(loginJSON);
         return loginJSON;
     }
 
@@ -142,6 +144,18 @@ public class JSONUtil {
         JSONObject feedbackJSON = new JSONObject();
         try {
             feedbackJSON.put(JSONType, feedback);
+        }catch (JSONException e){
+            e.printStackTrace();
+        }
+        return feedbackJSON;
+    }
+
+    //  updateUserInfo
+    public static JSONObject updateUserInfo(int type){
+        JSONObject feedbackJSON = new JSONObject();
+        try {
+            feedbackJSON.put(JSONType, updateUserInfo);
+            feedbackJSON.put(Student.updateUserInfo.updateType, type);
         }catch (JSONException e){
             e.printStackTrace();
         }

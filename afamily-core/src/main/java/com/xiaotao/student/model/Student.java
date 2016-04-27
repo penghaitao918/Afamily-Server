@@ -19,6 +19,13 @@ public class Student {
         public static final String classes = "USER_CLASSES";
     }
 
+    public static final class updateUserInfo {
+        public static final int updateSex = 0;
+        public static final int updatePortrait = 1;
+        public static final String updateType = "UPDATE_USER_INFO_TYPE";
+        public static final String updateBody = "UPDATE_USER_INFO_MESSAGE";
+    }
+
     private int userId = 0;
     private String studentId = null;
     private String password = null;

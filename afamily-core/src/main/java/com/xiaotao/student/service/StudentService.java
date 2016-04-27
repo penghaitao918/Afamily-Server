@@ -23,4 +23,6 @@ public interface StudentService {
     void submitTask(StudentTask task);
 
     List<StudentTask> getAllStudentTaskInfoList();
+
+    void updateUserSex(Student student);
 }

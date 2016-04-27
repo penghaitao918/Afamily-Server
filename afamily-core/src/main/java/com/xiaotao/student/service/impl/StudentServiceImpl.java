@@ -70,5 +70,10 @@ public class StudentServiceImpl implements StudentService {
         return studentDao.getAllStudentTaskInfoList();
     }
 
+    @Override
+    public void updateUserSex(Student student) {
+        studentDao.updateUserSex(student);
+    }
+
 
 }
