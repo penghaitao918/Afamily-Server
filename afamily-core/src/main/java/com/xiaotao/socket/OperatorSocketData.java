@@ -2,7 +2,7 @@ package com.xiaotao.socket;
 
 import com.xiaotao.feedback.model.Feedback;
 import com.xiaotao.feedback.service.FeedbackService;
-import com.xiaotao.student.model.OnLine;
+import com.xiaotao.student.model.CheckIn;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
@@ -160,9 +160,9 @@ public class OperatorSocketData implements Runnable{
  */
 
     private void check(JSONObject jsonObject) {
-        OnLine onLine = new OnLine(jsonObject, s);
-        studentService.check(onLine);
-        if (onLine.getId() > 0) {
+        CheckIn checkIn = new CheckIn(jsonObject, s);
+        studentService.check(checkIn);
+        if (checkIn.getId() > 0) {
             ServerSend send = new ServerSend(JSONUtil.Check());
             new Thread(send).start();
         }

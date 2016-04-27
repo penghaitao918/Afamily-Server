@@ -1,11 +1,10 @@
 package com.xiaotao.student.service.impl;
 
 import com.xiaotao.student.dao.StudentDao;
-import com.xiaotao.student.model.OnLine;
+import com.xiaotao.student.model.CheckIn;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
-import com.xiaotao.user.dao.UserDao;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,18 +26,22 @@ public class StudentServiceImpl implements StudentService {
         return studentDao.register(user);
     }
 
-        @Override
-        public int check(OnLine onLine) {
-        //    OnLine onLine = new OnLine(socket ,student.getStudentId());
-            return studentDao.check(onLine);
-        }
+    @Override
+    public int check(CheckIn checkIn) {
+        return studentDao.check(checkIn);
+    }
+
+    @Override
+    public List<CheckIn> getAllCheckInfoList() {
+        return studentDao.getAllCheckInfoList();
+    }
 
     @Override
     public Student login(Student user, Socket socket) {
         Student student = studentDao.login(user);
         if (student != null && student.getPassword().equals(user.getPassword())){
-            OnLine onLine = new OnLine(socket ,student.getStudentId());
-            studentDao.logInWrite(onLine);
+            CheckIn checkIn = new CheckIn(socket ,student.getStudentId());
+            studentDao.logInWrite(checkIn);
             return student;
         } else {
             return null;

@@ -1,7 +1,11 @@
 package com.xiaotao.web;
 
+import com.genghis.steed.ajax.response.PageResponse;
 import com.xiaotao.BaseController;
-import com.xiaotao.user.model.User;
+import com.xiaotao.student.model.CheckIn;
+import com.xiaotao.student.model.StudentTask;
+import com.xiaotao.student.service.StudentService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,6 +43,9 @@ import javax.servlet.http.HttpSession;
 @Controller
 public class HomeController extends BaseController {
 
+    @Autowired
+    private StudentService studentService;
+
     @RequestMapping(value = "/login", method = {RequestMethod.GET})
     public String login(HttpServletRequest request, HttpSession session) {
         return "login";
@@ -66,6 +73,12 @@ public class HomeController extends BaseController {
         }else {
             return "redirect:/login";
         }
+    }
+
+    @RequestMapping(value = "/checkIn/findAllInfoList", method = {RequestMethod.POST})
+    @ResponseBody
+    public PageResponse<CheckIn> findAllStudentTask(CheckIn checkIn) {
+        return new PageResponse<CheckIn>(checkIn.getPage(),studentService.getAllCheckInfoList());
     }
 
 }

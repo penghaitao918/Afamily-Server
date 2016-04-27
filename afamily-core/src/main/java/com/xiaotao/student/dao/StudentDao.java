@@ -1,10 +1,9 @@
 package com.xiaotao.student.dao;
 
 import com.xiaotao.mybatis.MyBatisScan;
-import com.xiaotao.student.model.OnLine;
+import com.xiaotao.student.model.CheckIn;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
-import com.xiaotao.task.model.TaskInfo;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -19,9 +18,11 @@ public interface StudentDao {
 
     int register(Student user);
 
-    int check(OnLine onLine);
+    int check(CheckIn checkIn);
 
-    void logInWrite(OnLine onLine);
+    List<CheckIn> getAllCheckInfoList();
+
+    void logInWrite(CheckIn checkIn);
 
     void logOutWrite(@Param("port") int port);
 

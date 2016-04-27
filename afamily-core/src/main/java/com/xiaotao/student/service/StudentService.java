@@ -1,6 +1,6 @@
 package com.xiaotao.student.service;
 
-import com.xiaotao.student.model.OnLine;
+import com.xiaotao.student.model.CheckIn;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
 import org.apache.ibatis.annotations.Param;
@@ -15,7 +15,9 @@ public interface StudentService {
 
     Student login(Student user, Socket socket);
 
-    int check(OnLine onLine);
+    int check(CheckIn checkIn);
+
+    List<CheckIn> getAllCheckInfoList();
 
     void logout(@Param("port") int port);
 

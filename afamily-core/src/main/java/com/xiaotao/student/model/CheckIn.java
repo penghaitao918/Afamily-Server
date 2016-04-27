@@ -1,5 +1,6 @@
 package com.xiaotao.student.model;
 
+import com.genghis.steed.mybatis.model.PageBase;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -30,21 +31,22 @@ import java.net.Socket;
  * @author xiaoTao
  * @date 2016-04-08  12:04
  */
-public class OnLine {
+public class CheckIn extends PageBase {
 
     private int id = -1;
     private int port = 0;
     private Boolean flag = false;
     private String account = null;
     private String address = null;
+    private String checkTime = null;
 
-    public OnLine() {}
-    public OnLine(Socket socket, String account){
+    public CheckIn() {}
+    public CheckIn(Socket socket, String account){
         this.account = account;
         this.port = socket.getPort();
         this.address = socket.getInetAddress().toString();
     }
-    public OnLine(JSONObject jsonObject, Socket socket){
+    public CheckIn(JSONObject jsonObject, Socket socket){
         try {
             this.account = jsonObject.getString(Student.info.account);
             this.port = socket.getPort();
@@ -92,5 +94,13 @@ public class OnLine {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getCheckTime() {
+        return checkTime;
+    }
+
+    public void setCheckTime(String time) {
+        this.checkTime = time;
     }
 }

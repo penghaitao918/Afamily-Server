@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>首页</title>
+    <link rel="stylesheet" href="<c:url value="/pulgins/DataTables-1.10.11/media/css/jquery.dataTables.min.css"/>">
     <%@include file="include/common.jsp" %>
     <style>
         body{
@@ -61,35 +62,85 @@
                 <span class="pull-right font-18" id="nowTime"></span>
             </div>
 
-            <div class="container">
-                <div class="two-dimensional">
-                    <div class="thumbnail">
-                        <%--在这里放图片--%>
-                        <img alt="320x320" width="320px" height="320px">
-                        <div class="caption">
-                            <h3>扫描二维码</h3>
-
-                            <p id="countdown">离下一次刷新还有10s</p>
-
-                            <p id="refreshCode"></p>
-                        </div>
-                    </div>
-                </div>
+            <div class="container-fluid margin-md">
+                <table id="check-list" class="table table-responsive table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th>序号</th>
+                        <th>学号</th>
+                        <th>地址</th>
+                        <th>端口</th>
+                        <th>时间</th>
+                    </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
             </div>
+
         </div>
     </div>
 </div>
 </body>
 </html>
 
+<script src="<c:url value="/pulgins/DataTables-1.10.11/media/js/jquery.dataTables.js"/>"></script>
 <script>
-    //  初始化倒计时时长
-    var countdownTime = 10;
     $(function () {
-        setCode();
         window.setInterval(setNowTime, 1000);
-        window.setInterval(setCode, countdownTime * 1000);
+        var table = $("#check-list").DataTable({
+            "bStateSave": true,
+            "order": [[ 1, 'asc' ]],
+            "autoWidth": true,   // enable/disable fixed width and enable fluid table
+            "processing": true, // enable/disable display message box on record load
+            "language": {
+                "decimal": "",
+                "emptyTable": "没有数据",
+                "info": "当前为 _START_ 至 _END_ 号记录 , 一共 _TOTAL_ 条记录",
+                "infoEmpty": "当前为 0 至 0 号记录 , 一共 0 条记录",
+                "infoFiltered": "(找到 _MAX_ 条记录)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "显示 _MENU_ 条记录",
+                "loadingRecords": "加载中...",
+                "processing": "Processing...",
+                "search": "查询:",
+                "zeroRecords": "没有找到匹配记录",
+                "paginate": {
+                    "first": "第一页",
+                    "last": "最后一页",
+                    "next": "下一页",
+                    "previous": "上一页"
+                }
+            },
+            "ajax": function (data, fnCallback) {
+                $.ajax({
+                    "url": basePath + "checkIn/findAllInfoList",
+                    "dataType": 'json',
+                    "type": "POST",
+                    "success": function (result) {
+                        result.data = result.resultList;
+                        fnCallback(result);
+
+                    },
+                    "error": function () {
+                    }
+                });
+            },
+            "columns": [
+                { data: "id" },
+                { data: "account" },
+                { data: "address" },
+                { data: "port" },
+                { data: 'checkTime'}
+            ]
+        });
+        table.on( 'order.dt search.dt', function () {
+            table.column(0, {search:'applied', order:'applied'}).nodes().each( function (cell, i) {
+                cell.innerHTML = i+1;
+            } );
+        } ).draw();
     });
+
     function setNowTime() {
         var nowDate = format(new Date(), "yyyy-MM-dd    hh:mm:ss");
         $("#nowTime").html(nowDate);
@@ -111,26 +162,4 @@
                 fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
         return fmt;
     }
-
-    var chars = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
-        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
-        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-    function setCode() {
-        var res = "";
-        for (var i = 0; i < 6; i++) {
-            var id = parseInt(62 * Math.random());
-            res += chars[id];
-        }
-        $("#refreshCode").html(res)
-    }
-
-    //  初始化当前计时
-    var nowCountdown = countdownTime - 1;
-    function setCountdown() {
-        if (nowCountdown == 0) {
-            nowCountdown = countdownTime;
-        }
-        return nowCountdown--;
-    }
-
 </script>
