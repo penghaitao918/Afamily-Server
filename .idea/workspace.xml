@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="c01dcdf2-25a4-4367-aa5c-87b8b6e18a6f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/util/JSONUtil.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/util/JSONUtil.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/OnLine.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/OnLine.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Student.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Student.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.xml" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/StudentService.java" afterPath="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/StudentService.java" />
@@ -300,29 +300,68 @@
       <file leaf-file-name="OperatorSocketData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3772" max-vertical-offset="4275">
-              <caret line="234" column="65" selection-start-line="234" selection-start-column="65" selection-end-line="234" selection-end-column="65" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2478" max-vertical-offset="4427">
+              <caret line="163" column="26" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JSONUtil.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/util/JSONUtil.java">
+      <file leaf-file-name="StudentService.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/StudentService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.55014324" vertical-offset="2658" max-vertical-offset="3116">
-              <caret line="157" column="62" selection-start-line="157" selection-start-column="52" selection-end-line="157" selection-end-column="62" />
+            <state vertical-scroll-proportion="0.33252427" vertical-offset="72" max-vertical-offset="589">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Student.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Student.java">
+      <file leaf-file-name="StudentDao.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="321" max-vertical-offset="1520">
-              <caret line="25" column="45" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="45" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="2071">
+              <caret line="32" column="35" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="35" />
+              <folding>
+                <marker date="1461754196133" expanded="true" signature="435:491" placeholder="SELECT * FRO..student_user..." />
+                <marker date="1461754196133" expanded="true" signature="740:850" placeholder="INSERT INTO ..." />
+                <marker date="1461754196133" expanded="true" signature="921:944" placeholder="select @@IDE..." />
+                <marker date="1461754196133" expanded="true" signature="1148:1248" placeholder="insert into ..." />
+                <marker date="1461754196133" expanded="true" signature="1315:1338" placeholder="select @@IDE..." />
+                <marker date="1461754196133" expanded="true" signature="1510:1606" placeholder="insert into ..." />
+                <marker date="1461754196133" expanded="true" signature="1673:1696" placeholder="select @@IDE..." />
+                <marker date="1461754196133" expanded="true" signature="1853:1939" placeholder="update log s..." />
+                <marker date="1461754196133" expanded="true" signature="2085:2138" placeholder="select * fro..student_task..." />
+                <marker date="1461754196133" expanded="true" signature="2246:2302" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="2409:2465" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="2572:2628" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="2735:2791" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="2898:2954" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="3061:3117" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="3224:3280" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="3387:3443" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="3550:3606" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="3713:3769" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="3889:3931" placeholder="select * fro..student_task..." />
+                <marker date="1461754196133" expanded="true" signature="4037:4101" placeholder="update stude..." />
+                <marker date="1461754196133" expanded="true" signature="4206:4231" placeholder="insert into ..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="OnLine.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/OnLine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1634">
+              <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1848#1849#0" expanded="true" />
+                <element signature="e#1873#1874#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
+                <element signature="e#1934#1935#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -340,7 +379,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/error/500.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/opinions/info.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/menu.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/web.xml" />
@@ -384,13 +422,14 @@
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/java/com/xiaotao/web/FeedbackController.java" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/options/info.jsp" />
         <option value="$PROJECT_DIR$/afamily-webapp/src/main/webapp/WEB-INF/jsp/include/common.jsp" />
+        <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Student.java" />
+        <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/util/JSONUtil.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/StudentService.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/impl/StudentServiceImpl.java" />
-        <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Student.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.xml" />
+        <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/OnLine.java" />
         <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java" />
-        <option value="$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/util/JSONUtil.java" />
       </list>
     </option>
   </component>
@@ -626,6 +665,48 @@
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="impl" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="afamily-parent" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Afamily-Server" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="afamily-core" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="xiaotao" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="student" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="model" />
               <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -691,6 +772,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://F:/ACMerHome/Afamily-Server/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
@@ -1202,7 +1284,7 @@
       <workItem from="1461561284075" duration="19177000" />
       <workItem from="1461639606072" duration="3062000" />
       <workItem from="1461680002763" duration="489000" />
-      <workItem from="1461725529674" duration="6899000" />
+      <workItem from="1461725529674" duration="12518000" />
     </task>
     <task id="LOCAL-00001" summary="# 2016/2/28">
       <created>1456593504211</created>
@@ -1292,11 +1374,15 @@
       <created>1461583347047</created>
       <updated>1461583347047</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="# 2016/4/27&#10;# 修改性别已实现&#10;">
+      <created>1461743591365</created>
+      <updated>1461743591365</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="396477000" />
+    <option name="totallyTimeSpent" value="402096000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="0" />
@@ -1307,10 +1393,11 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30963665" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.310559" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41614908" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.318323" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39968404" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -1331,7 +1418,6 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2515528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -1402,7 +1488,8 @@
     <MESSAGE value="# 2016/4/20&#10;# 任务发布实现&#10;" />
     <MESSAGE value="# 2016/4/22&#10;# 任务一览 实现&#10;" />
     <MESSAGE value="# 2016/4/25&#10;# 意见反馈完成&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="# 2016/4/25&#10;# 意见反馈完成&#10;" />
+    <MESSAGE value="# 2016/4/27&#10;# 修改性别已实现&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="# 2016/4/27&#10;# 修改性别已实现&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1429,20 +1516,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/pulgins/DataTables-1.10.11/examples/server_side/pipeline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.785714" vertical-offset="2185" max-vertical-offset="13262">
-          <caret line="125" column="31" selection-start-line="125" selection-start-column="31" selection-end-line="125" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/pulgins/DataTables-1.10.11/extensions/Scroller/examples/initialisation/state_saving.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36585367" vertical-offset="446" max-vertical-offset="3496">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/EcmaScript5.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33231708" vertical-offset="3064" max-vertical-offset="3629">
@@ -1751,80 +1824,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/StudentService.java">
+    <entry file="file://$PROJECT_DIR$/afamily-webapp/src/main/webapp/pulgins/DataTables-1.10.11/examples/resources/syntax/shCore.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="56" max-vertical-offset="551">
-          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/impl/StudentServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="857" max-vertical-offset="1292">
-          <caret line="74" column="40" selection-start-line="74" selection-start-column="40" selection-end-line="74" selection-end-column="40" />
-          <folding>
-            <element signature="e#2316#2317#0" expanded="false" />
-            <element signature="e#2365#2366#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1955719" vertical-offset="303" max-vertical-offset="798">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36900368" vertical-offset="1458" max-vertical-offset="1729">
-          <caret line="82" column="59" selection-start-line="82" selection-start-column="59" selection-end-line="82" selection-end-column="59" />
-          <folding>
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..student_user..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="select @@IDE..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update onlin..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update onlin..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="select * fro..student_task..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="select * fro..student_task..." />
-            <marker date="1461740083053" expanded="true" signature="-1:-1" placeholder="update stude..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3772" max-vertical-offset="4275">
-          <caret line="234" column="65" selection-start-line="234" selection-start-column="65" selection-end-line="234" selection-end-column="65" />
+        <state vertical-scroll-proportion="0.33168316" vertical-offset="38265" max-vertical-offset="40698">
+          <caret line="2023" column="62" selection-start-line="2023" selection-start-column="62" selection-end-line="2023" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="321" max-vertical-offset="1520">
-          <caret line="25" column="45" selection-start-line="25" selection-start-column="35" selection-end-line="25" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="23" max-vertical-offset="1520">
+          <caret line="13" column="42" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/util/JSONUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55014324" vertical-offset="2658" max-vertical-offset="3116">
-          <caret line="157" column="62" selection-start-line="157" selection-start-column="52" selection-end-line="157" selection-end-column="62" />
+        <state vertical-scroll-proportion="0.3359375" vertical-offset="389" max-vertical-offset="3116">
+          <caret line="32" column="34" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54296875" vertical-offset="127" max-vertical-offset="836">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/impl/StudentServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11328125" vertical-offset="332" max-vertical-offset="1406">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="e#1442#1443#0" expanded="true" />
+            <element signature="e#1486#1487#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/model/OnLine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1634">
+          <caret line="34" column="17" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1873#1874#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1934#1935#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/dao/StudentDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="456" max-vertical-offset="2071">
+          <caret line="32" column="35" selection-start-line="32" selection-start-column="12" selection-end-line="32" selection-end-column="35" />
+          <folding>
+            <marker date="1461754196133" expanded="true" signature="435:491" placeholder="SELECT * FRO..student_user..." />
+            <marker date="1461754196133" expanded="true" signature="740:850" placeholder="INSERT INTO ..." />
+            <marker date="1461754196133" expanded="true" signature="921:944" placeholder="select @@IDE..." />
+            <marker date="1461754196133" expanded="true" signature="1148:1248" placeholder="insert into ..." />
+            <marker date="1461754196133" expanded="true" signature="1315:1338" placeholder="select @@IDE..." />
+            <marker date="1461754196133" expanded="true" signature="1510:1606" placeholder="insert into ..." />
+            <marker date="1461754196133" expanded="true" signature="1673:1696" placeholder="select @@IDE..." />
+            <marker date="1461754196133" expanded="true" signature="1853:1939" placeholder="update log s..." />
+            <marker date="1461754196133" expanded="true" signature="2085:2138" placeholder="select * fro..student_task..." />
+            <marker date="1461754196133" expanded="true" signature="2246:2302" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="2409:2465" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="2572:2628" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="2735:2791" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="2898:2954" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="3061:3117" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="3224:3280" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="3387:3443" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="3550:3606" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="3713:3769" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="3889:3931" placeholder="select * fro..student_task..." />
+            <marker date="1461754196133" expanded="true" signature="4037:4101" placeholder="update stude..." />
+            <marker date="1461754196133" expanded="true" signature="4206:4231" placeholder="insert into ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/socket/OperatorSocketData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2478" max-vertical-offset="4427">
+          <caret line="163" column="26" selection-start-line="163" selection-start-column="26" selection-end-line="163" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/afamily-core/src/main/java/com/xiaotao/student/service/StudentService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33252427" vertical-offset="72" max-vertical-offset="589">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
           <folding />
         </state>
       </provider>

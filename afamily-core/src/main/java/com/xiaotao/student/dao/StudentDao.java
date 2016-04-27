@@ -19,9 +19,11 @@ public interface StudentDao {
 
     int register(Student user);
 
-    void online_in(OnLine onLine);
+    int check(OnLine onLine);
 
-    void online_out(int port);
+    void logInWrite(OnLine onLine);
+
+    void logOutWrite(@Param("port") int port);
 
     StudentTask getStudentTaskInfo(@Param("account") String account);
 

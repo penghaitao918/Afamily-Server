@@ -24,20 +24,34 @@
     </insert>
 
     <!--
-        @functionName   上线
+        @functionName   签到
         @description    用户上线写入，同时触发器写入log
     -->
-    <update id="online_in" parameterType="com.xiaotao.student.model.OnLine">
-        update online set address=#{address},port=#{port},flag=1 where account=#{account}
-    </update>
+    <insert id="check" parameterType="com.xiaotao.student.model.OnLine">
+        insert into checkIn(account,address,port,check_time) values(#{account},#{address},#{port},GETDATE())
+        <selectKey resultType="int" keyProperty="id">
+            select @@IDENTITY as id
+        </selectKey>
+    </insert>
+
 
     <!--
-        @functionName   下线
-        @description    用户下线写入，同时触发器写入log
+        @functionName   登录日志写入
     -->
-    <update id="online_out" parameterType="java.lang.Integer">
-        update online set flag=0 where port=#{port} and flag=1
+    <insert id="logInWrite" parameterType="com.xiaotao.student.model.OnLine">
+        insert into log(account,address,port,login_time) values(#{account},#{address},#{port},GETDATE())
+        <selectKey resultType="int" keyProperty="id">
+            select @@IDENTITY as id
+        </selectKey>
+    </insert>
+
+    <!--
+        @functionName   注销日志写入
+    -->
+    <update id="logOutWrite" parameterType="java.lang.Integer">
+        update log set logout_time=GETDATE(), flag_login=0 where port=#{port} and flag_login=1
     </update>
+
 
     <select id="getStudentTaskInfo" resultType="com.xiaotao.student.model.StudentTask" parameterType="java.lang.String">
         select * from student_task where account = #{account}
@@ -82,5 +96,9 @@
     <update id="updateUserSex" parameterType="com.xiaotao.student.model.Student">
         update student_user set sex=#{sex} where student_id=#{studentId}
     </update>
+
+    <insert id="check_InOrOut" parameterType="com.xiaotao.student.model.OnLine">
+        insert into  () values ();
+    </insert>
 
 </mapper>

@@ -27,12 +27,18 @@ public class StudentServiceImpl implements StudentService {
         return studentDao.register(user);
     }
 
+        @Override
+        public int check(OnLine onLine) {
+        //    OnLine onLine = new OnLine(socket ,student.getStudentId());
+            return studentDao.check(onLine);
+        }
+
     @Override
     public Student login(Student user, Socket socket) {
         Student student = studentDao.login(user);
         if (student != null && student.getPassword().equals(user.getPassword())){
             OnLine onLine = new OnLine(socket ,student.getStudentId());
-            studentDao.online_in(onLine);
+            studentDao.logInWrite(onLine);
             return student;
         } else {
             return null;
@@ -40,8 +46,8 @@ public class StudentServiceImpl implements StudentService {
     }
 
     @Override
-    public void logout(int port) {
-        studentDao.online_out(port);
+    public void logout(@Param("port") int port) {
+        studentDao.logOutWrite(port);
     }
 
     @Override

@@ -1,5 +1,6 @@
 package com.xiaotao.student.service;
 
+import com.xiaotao.student.model.OnLine;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
 import org.apache.ibatis.annotations.Param;
@@ -14,9 +15,11 @@ public interface StudentService {
 
     Student login(Student user, Socket socket);
 
-    int register(Student user);
+    int check(OnLine onLine);
 
-    void logout(int port);
+    void logout(@Param("port") int port);
+
+    int register(Student user);
 
     StudentTask getStudentTaskInfo(@Param("account") String account);
 

@@ -2,6 +2,7 @@ package com.xiaotao.socket;
 
 import com.xiaotao.feedback.model.Feedback;
 import com.xiaotao.feedback.service.FeedbackService;
+import com.xiaotao.student.model.OnLine;
 import com.xiaotao.student.model.Student;
 import com.xiaotao.student.model.StudentTask;
 import com.xiaotao.student.service.StudentService;
@@ -84,12 +85,11 @@ public class OperatorSocketData implements Runnable{
 
     //  定义处理用户请求的方法
     private void dealWithUserRequest(int type, JSONObject jsonObject) throws JSONException {
-        for (Iterator<Socket> iterator = SocketThread.socketList.iterator(); iterator.hasNext();){
-            Socket socket = iterator.next();
-            System.out.println(socket);
-        }
         ServerSend serverSend = null;
         switch (type){
+            case JSONUtil.check:
+                check(jsonObject);
+                break;
             case JSONUtil.login:
                 login(jsonObject, 1);
                 break;
@@ -158,6 +158,15 @@ public class OperatorSocketData implements Runnable{
  ***************** 服务器数据请求实现 **************************
  ***************************************************************
  */
+
+    private void check(JSONObject jsonObject) {
+        OnLine onLine = new OnLine(jsonObject, s);
+        studentService.check(onLine);
+        if (onLine.getId() > 0) {
+            ServerSend send = new ServerSend(JSONUtil.Check());
+            new Thread(send).start();
+        }
+    }
 
 
     private void login(JSONObject jsonObject, int type) {

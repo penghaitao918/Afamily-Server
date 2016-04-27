@@ -16,21 +16,21 @@ import java.util.List;
 public class JSONUtil {
 
     public static final String JSONType = "CONNECT_TYPE";
-    public static final String connectCheck = "CONNECT_CHECK";
-    public static final int check = -1;
-    public static final int notify = 0;
-    public static final int login = 1;
-    public static final int reLogin = 2;
-    public static final int logout = 3;
-    public static final int taskList = 4;
-    public static final int studentTaskList = 5;
-    public static final int submitTask = 6;
-    public static final int sendConversationMessage = 7;
-    public static final int feedback = 8;
-    public static final int updateUserInfo = 9;
+
+    public static final int check = 0;
+    public static final int notify = 1;
+    public static final int login = 2;
+    public static final int reLogin = 3;
+    public static final int logout =4 ;
+    public static final int taskList = 5;
+    public static final int studentTaskList = 6;
+    public static final int submitTask = 7;
+    public static final int sendConversationMessage = 8;
+    public static final int feedback = 9;
+    public static final int updateUserInfo = 10;
 
     //  心跳检测
-    public static JSONObject connectCheck() {
+    public static JSONObject Check() {
         //  创建 JSONObject 对象
         JSONObject checkJSON = new JSONObject();
         try {
