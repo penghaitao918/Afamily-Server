@@ -84,5 +84,10 @@ public class StudentServiceImpl implements StudentService {
         studentDao.updateUserSex(student);
     }
 
+    @Override
+    public void updateUserPortrait(Student student) {
+        studentDao.updateUserPortrait(student);
+    }
+
 
 }

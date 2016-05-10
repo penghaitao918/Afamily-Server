@@ -30,4 +30,5 @@ public interface StudentService {
     List<StudentTask> getAllStudentTaskInfoList();
 
     void updateUserSex(Student student);
+    void updateUserPortrait(Student student);
 }

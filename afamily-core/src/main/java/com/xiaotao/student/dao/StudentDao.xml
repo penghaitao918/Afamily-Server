@@ -101,6 +101,10 @@
         update student_user set sex=#{sex} where student_id=#{studentId}
     </update>
 
+    <update id="updateUserPortrait" parameterType="com.xiaotao.student.model.Student">
+        update student_user set portrait=#{portrait} where student_id=#{studentId}
+    </update>
+
     <insert id="check_InOrOut" parameterType="com.xiaotao.student.model.CheckIn">
         insert into  () values ();
     </insert>

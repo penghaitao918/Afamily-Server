@@ -42,5 +42,6 @@ public interface StudentDao {
     List<StudentTask> getAllStudentTaskInfoList();
 
     void updateUserSex(Student student);
+    void updateUserPortrait(Student student);
 
 }

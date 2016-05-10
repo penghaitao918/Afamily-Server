@@ -240,6 +240,10 @@ public class OperatorSocketData implements Runnable{
                     student.setSex(jsonObject.getString(Student.updateUserInfo.updateBody));
                     studentService.updateUserSex(student);
                     break;
+                case Student.updateUserInfo.updatePortrait:
+                    student.setPortrait(jsonObject.getString(Student.updateUserInfo.updateBody));
+                    studentService.updateUserPortrait(student);
+                    break;
             }
             ServerSend send = new ServerSend(JSONUtil.updateUserInfo(type));
             new Thread(send).start();
