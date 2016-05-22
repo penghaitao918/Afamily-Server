@@ -12,8 +12,10 @@
 
         <!--LOGO-->
         <div class="nav-header">
-            <a href="index.html" class="brand">
-                <span class="brand-name">ACMer</span>
+            <a href="#" onclick="toHome()">
+                <span class="brand-name">
+                    <img src="<c:url value="/images/logo.png" />" />
+                </span>
             </a>
         </div>
 
