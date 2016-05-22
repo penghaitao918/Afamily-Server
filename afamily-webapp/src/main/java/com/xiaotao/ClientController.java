@@ -53,7 +53,7 @@ public class ClientController {
         return clientService.sendNotificationToAllUser(title, message);
     }
 
-    @RequestMapping(value = "/agreement", method = {RequestMethod.GET})
+    @RequestMapping(value = "/agreement", method = {RequestMethod.GET,RequestMethod.POST})
     public String agreement() {
         return "register/agreement";
         //      return "test";
