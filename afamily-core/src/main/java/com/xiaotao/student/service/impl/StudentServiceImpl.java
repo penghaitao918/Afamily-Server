@@ -40,18 +40,18 @@ public class StudentServiceImpl implements StudentService {
     public Student login(Student user, Socket socket) {
         Student student = studentDao.login(user);
         if (student != null && student.getPassword().equals(user.getPassword())){
-            CheckIn checkIn = new CheckIn(socket ,student.getStudentId());
-            studentDao.logInWrite(checkIn);
+/*            CheckIn checkIn = new CheckIn(socket ,student.getStudentId());
+            studentDao.logInWrite(checkIn);*/
             return student;
         } else {
             return null;
         }
     }
-
+/*
     @Override
     public void logout(@Param("port") int port) {
         studentDao.logOutWrite(port);
-    }
+    }*/
 
     @Override
     public StudentTask getStudentTaskInfo(@Param("account") String account) {

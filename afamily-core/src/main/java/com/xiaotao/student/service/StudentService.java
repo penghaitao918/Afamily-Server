@@ -19,7 +19,7 @@ public interface StudentService {
 
     List<CheckIn> getAllCheckInfoList();
 
-    void logout(@Param("port") int port);
+ //   void logout(@Param("port") int port);
 
     int register(Student user);
 

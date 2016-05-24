@@ -97,7 +97,7 @@ public class OperatorSocketData implements Runnable{
                 login(jsonObject,0);
                 break;
             case JSONUtil.logout:
-                studentService.logout(s.getPort());
+            //    studentService.logout(s.getPort());
                 closeSocket();
                 break;
             case JSONUtil.taskList:

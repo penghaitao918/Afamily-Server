@@ -22,9 +22,9 @@ public interface StudentDao {
 
     List<CheckIn> getAllCheckInfoList();
 
-    void logInWrite(CheckIn checkIn);
+/*    void logInWrite(CheckIn checkIn);
 
-    void logOutWrite(@Param("port") int port);
+    void logOutWrite(@Param("port") int port);*/
 
     StudentTask getStudentTaskInfo(@Param("account") String account);
 

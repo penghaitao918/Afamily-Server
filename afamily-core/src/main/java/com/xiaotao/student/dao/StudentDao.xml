@@ -39,9 +39,10 @@
     </select>
 
 
-    <!--
+<!--
+    &lt;!&ndash;
         @functionName   登录日志写入
-    -->
+    &ndash;&gt;
     <insert id="logInWrite" parameterType="com.xiaotao.student.model.CheckIn">
         insert into log(account,address,port,login_time) values(#{account},#{address},#{port},GETDATE())
         <selectKey resultType="int" keyProperty="id">
@@ -49,12 +50,13 @@
         </selectKey>
     </insert>
 
-    <!--
+    &lt;!&ndash;
         @functionName   注销日志写入
-    -->
+    &ndash;&gt;
     <update id="logOutWrite" parameterType="java.lang.Integer">
         update log set logout_time=GETDATE(), flag_login=0 where port=#{port} and flag_login=1
     </update>
+-->
 
 
     <select id="getStudentTaskInfo" resultType="com.xiaotao.student.model.StudentTask" parameterType="java.lang.String">

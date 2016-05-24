@@ -57,7 +57,7 @@ function submit(){
         async:false,
         success:
             function (data) {
-                //            alert(JSON.stringify(data));
+           //                 alert(JSON.stringify(data));
                 if(password == data.password){
                     window.location.href = basePath;
                 }else{
@@ -66,7 +66,7 @@ function submit(){
                 }
             },
         error: function(){
-            createCode();
+        //    createCode();
             alert("账号错误")
         }
     });
