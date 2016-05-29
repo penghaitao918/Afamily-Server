@@ -66,7 +66,7 @@ function submit(){
                 }
             },
         error: function(){
-        //    createCode();
+            createCode();
             alert("账号错误")
         }
     });
